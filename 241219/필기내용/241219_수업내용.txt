@@ -1,0 +1,195 @@
+
+*Cmd 창에서 명령어 입력 후 파일 생성 및 VS 코드 실행법*
+
+C:\Users\bcjrm>cd desktop
+
+C:\Users\bcjrm\Desktop>mkdir 241217
+
+C:\Users\bcjrm\Desktop>cd 241217
+
+C:\Users\bcjrm\Desktop\241217> code .
+
+C:\Users\bcjrm\Desktop\241217>
+
+----------------------------------------------------
+
+01. Web Editor 세팅
+> Visual Studio Code
+
+*VScode 리셋 후 재설치 하는 법 
+-C:\Users\bcjrm\.vscode\extensions
+
+이 중 bcjrm는 컴터마다 이름 다름 / 여기가 확창파일이여서 이거 제거 안하면 아무리 VScode 재설치해도 리셋이 안됨
+
+-C:\Users\bcjrm\AppData\Roaming\code 삭제
+
+이후 제어판 VScode 제거해야 완벽하게 깨끗하게 지워짐
+
+*VS 설치 시 반드시 해야 하는 추가 작업 선택 영역
+code로 열기 기능 사용 : 내가 현재 작업하고자 하는 폴더를 Root 폴더로 Root 폴더로 설정한 상태에서 바로 VScode를 활성ㅎㄹ 수 있게 하는 기능을 사용하겠다.는 설정을 해야함. 설치 3번째 단계에서 하단 2개 추가 선택해서 4개 다 선택 후 다음페이지 진행
+
+
+-----------------------------------------------
+
+*표기법
+kdtFed : Cammel -> 국내 가장 선호 공백,띄어쓰기,특수문자가 없어서 코딩 후 읽는 속도가 빠름
+kdt_fed : Sneak
+Kdtfed : H(헝가리 표기법)
+
+-----------------------------------------------
+
+*GUI : Grapic User Interface 방식으로 작업환경 세팅을 함
+
+
+브라우저에서 Chocolatey 검색 (맥 사용 불가) > https://chocolatey.org/ 들어가기 > community 클릭 > Find Packages > mongodb 검색 > 클릭 > Individual > 누르면 To install MongoDB, run the following command from the command line or from PowerShell: 목록에서 <choco install mongodb>라고 뜸 명령어로 설치 한다는 뜻.
+
+이걸 CLI : Command Line Interface 방식이라고 함. 이 방식을 많이 씀.
+
+
+-----------------------------------------------
+
+*CLI 방식으로 폴더 생성 후 VS 프로그램 바로 여는 방법
+
+검색창에서 Cmd 찾기
+*Cmd 창에서 명령어 입력 후 파일 생성 및 VS 코드 실행법*
+
+C:\Users\bcjrm>cd desktop
+
+C:\Users\bcjrm\Desktop>mkdir kdtfed
+C:\Users\bcjrm\Desktop>cd kdtfed
+C:\Users\\bcjrm\Desktop\kdtfed>mkdir (오늘날짜)
+C:\Users\\bcjrm\Desktop\kdtfed\오늘날짜폴더> code. [엔터]
+
+cd: Change Directory
+mkdir : Make Directory
+cd.. : 현재 위치한 Directory에서 한단계 위 홀더로 이동할 수 있게 해주는 명령어
+code . : vscode open.
+
+-----------------------------------------------
+
+VS code 2가지 영역 설정
+
+1) 환경 설정 : ctrl + ,
+- Tab Sixe >기본 들여쓰기 정도 설정 (num : 2)
+- Word Wrap : 가로로 길게 작성된 문장을 자동으로 세로 정렬 시켜주는 설정 (on)
+- Mouse Wheel Zoom : 현재 보고 있는 웹 에디터 줌인/줌아웃 설정
+- emmet > variable > lan > ko : 현재 작업중인 문서의 모국어를 한글로 설정
+
+2) 확장앱 설정
+- Korean Languge Pack
+- Material Icon Theme
+- Live Server : 단축키 : alt + L +O
+- indent rainbow : 자식요소 알아보기 쉽게 들여쓰기에 따라 색으로 표시해 줌
+- Auto Rename Tag : 열고 닫는 태그 한쌍인데, 여는 테그를 변경 시 닫는 테그를 자동으로 바꿔줌
+- HtmltagWrap : 자동으로 현재 선택한 요소의 부모 요소 태그 만들어 주는 요소
+- Html to CSS autocompletion : Html에서 쓴 id class 를 CSS 자동완성으로 가져와줌
+- Html css suport : 
+- CSS peak
+- Turbo JS
+- Live Sass Compiler
+- Prettier : 코딩 문장 오류 알려줌, 설치 이후 설정 필요 > 설정 for 검색 > Defaulf Formatter 에서 선택 . > Format On Save 선택
+*별도 옵션
+- Figma for VS Code
+- Font Awesome Gallery
+- One Dark pro : 시력보호
+- Power Mode : 설정 > Powermode: Enabled 클릭 (파워 코딩 모드) 코딩하는걸 눈에 보이게 시각화
+
+-----------------------------------------------
+
+* git :
+- 형상(형태&상태) 기억 관리 툴
+- 버전 관리 툴
+-로컬 컴퓨터
+
+*깃허브 (GitHub)
+*Hub(통로)
+-git 소유주 정보 : 데이터 업로드가 되어지는 위치 다르게 설정
+
+* 1개의 제품 혹은 서비스 개발 시
+-혼자서 작업
+> 메인 + 서브 + 상세페이지
+
+- 팀 형태로 협업 
+> 메인은 A 가
+> 서브는 B가
+> 상세는 C가 작업
+
+=> 1개의 파일로 병합을 해줘야 함. 
+=> 최종적 병합단계가 아니더라도 중간 단계마다 데이터를 취합해서 1개의 파일로 정리해야 함.
+=> 면접 시 git으로 코딩 내역을 확인하겠다고 요구할 수 있음 
+
+*이전 Git 리셋하기
+- 제어판 > 자격증명관리자 설정 > Windows 자격증명 > 일반자격증명 > git 있으면 제거
+- 제어판 > 프로그램제거 > git 있으면 제거 
+
+버전 1.1.1
+이전버전과 호환불가수준의 새버전/해당 버전 안에서 호환 가능 수준 버전업/소소한 버그 개선
+
+-------------------------------------
+
+*git 설치법
+https://git-scm.com/ > Standalone Installer > 64-bit Git for Windows Setup. > 기본설정대로 설치. 
+
+C:\Users\bcjrm>git -v
+-v : 버전확인
+C:\Users\bcjrm>git config --list
+git의 소유정보 확인 법
+user 네임과 이메일을 적용되어있는지 확인 가능
+
+본인의 컴퓨터에서 어떤 폴더 혹은 어떤 프로젝트에서든지 공통적으로 영향을 미칠 수 있도록 세팅하고자 한다면 "전역"환경 변수 설정을 해야 함 => global(전역) <-> local(지역)
+
+*전역 환경 변수 설정법
+cmd를 관리자 권한 설정으로 다시 열어야 함.
+*github( https://github.com/ )에서 가입된 이름과 이메일로만 세팅해야함.
+*name : MJ-hong0372
+*email : bcjrm0108@naver.com
+
+>CND로 돌아옴
+C:\Windows\System32>git config --global user.name "MJ-hong0372"
+C:\Windows\System32>git config --global user.email "bcjrm0108@naver.com"
+
+각각 입력 후 엔터
+C:\Users\bcjrm>git config --list
+git의 소유정보 재 확인 하면 됨
+
+
+
+-----------------------------
+
+
+* git <-> github 연결
+
+로컬 컴퓨터 어떤 프로텍트 가정!!!!
+> 파일 untracked (추적되지 않은 파일)
+> staging area 공간 (*임시 대기 공간) unmodified (대기상태 파일)
+> 이후 git으로 보내면 파일 commited (*repository 생성 관리)
+
+*개발자가 버전관리 // 1~10 데이터를 몇 회에 나워서 버전 관리를 할지 고민해야 함. 
+-1번에 데이터 1개 버전을 관리하고 싶을 수도 있고
+- 3/ 3/ 4 으로 나눠서 버전 관리를 하고 싶을 수도 있음
+그래서 바로 git으로 보내지 않고 staging area 공간에 unmodified 파일 상태로 존재하게 됨.
+
+
+* git <-> git - hub 연결
+: hub 안에도 repository를 생성해야 함 
+
+https://github.com/MJ-hong0372?tab=repositories 페이지 이동
+
+new 클릭 > Create a new repository 이동 > Repository name* 이름 입력 > Public / Private 중에 결정 > 생성 버튼 클릭 > 생성완료
+
+
+*현재 개발자가 작업중인 폴더 : Working Directory
+
+cd .. : 현재 위치한 Directory에서 한단계 위 홀더로 이동할 수 있게 해주는 명령어
+
+
+* VScode 창에서
+
+` : 뺵틱
+
+*컨트롤 +` : 누르면 하단에 창이 뜸 + 버튼을 누르면 Git Bash 창이 뜸 
+
+
+최초의 컴퓨터 > 여러 개발자들이 각자의 모니터 마우스 키보드를 가지고 공동으로 1대의 컴퓨터를 공유하면서 사용했음 > 내가 접속하고자 하는 폴더와 파일을 타인이 동시 접속하면 충돌이 일어남 > 터미널에서 모여서 공동으로 작업을 진행 함. 
+
+

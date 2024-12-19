@@ -1,0 +1,212 @@
+CLI : Command Line Interface
+Grapic User Interface
+
+C:\Users\bcjrm>cd desktop ////디렉토리변경
+C:\Users\bcjrm\Desktop> mkdir 241217 //폴더생성
+C:\Users\bcjrm\Desktop\241217> code    //// VS 파일이 열림
+
+
+
+*Cmd 창에서 명령어 입력 후 파일 생성 및 VS 코드 실행법*
+
+C:\Users\bcjrm>cd desktop
+
+C:\Users\bcjrm\Desktop>mkdir 241217
+
+C:\Users\bcjrm\Desktop>cd 241217
+
+C:\Users\bcjrm\Desktop\241217> code .
+
+C:\Users\bcjrm\Desktop\241217>
+
+*VS코드 기본환경*
+컨트롤+ 쉼표 = 설정에서 변경 가능
+01. ta = 탭 사이즈 = 2
+02. zoom = 줌 설정 -  마우스 휠 줌에 체크
+03. wrap = Editor: Word Wrap = 코드가 길어질 때 하단에 스크롤바가 안 생기고 자동 줄바꿈 기능인데 꺼야함.
+     Controls how lines should wrap. 설정을 ON 으로 설정함
+04. Emmet: Variables --emmet 환경변수 설정
+	Variables to be used in Emmet snippets.
+	item - lang - ko 로 변경
+
+*VS 확장앱 설치*
+01. live sever
+02. Korean languge pack
+03. material icon theme
+04. Prettier - 설치 후 환경설정 필요 > for >Editor: Default Formatter
+다른 모든 포맷터 설정보다 우선하는 기본 포맷터를 정의합니다. 포맷터를 제공하는 확장 프로그램의 식별자 여야합니다. > ㅔPrettir 클릭 > Editor: Format On Save
+저장 시 파일의 형식을 지정합니다. 포맷터를 사용할 수 있어야 하며 편집기를 종료하면 안 됩니다. Files: Auto Save이(가) 'afterDelay'로 설정된 경우 파일은 명시적으로 저장될 때만 형식이 지정됩니다. > 체크완료
+> 컨트롤 S 누르는 순간 코드 자동 정리됨
+05. htmltagwrap
+06. Turbo JS (자바스크립트 단축기)
+
+href = Hyper Reference
+쉬프트+3 = # (해쉬테그)
+알트 누른 상태로 "" 안에 커서로 여러 군데 선택 후 쉬프크+3 누르면 해쉬테그 처리 됨
+
+! 치고 탭키 누르기> 
+h1{쓰고 싶은 내용 적고 탭 >> 자동 태그 생성
+ul>li*4 적고 탭 >>부모요소와 자식요소 4개 동시 생성
+ul>li>a{$}*4 
+ul>(li>a{$})*4 
+
+알트누른채로 +L+O > 브라우저 미리보기
+
+color: inherit;
+inherit : 상속 > 부모요소에서 상속 시키는 것
+
+---------------
+
+CSS reset 설정 사이트 - https://meyerweb.com/eric/tools/css/reset/
+폰트 사이트 - https://fontawesome.com/
+CDN : Contents Delivery Network : 전 세계에 분산된 서버 네트워크로, 사용자에게 콘텐츠를 빠르고 효율적으로 전달하는 기술
+https://cdnjs.com/  페이지로 가서 검색 후 자바스크립트로 주소 복사
+<script src="https://cdnjs.com/libraries/font-awesome" crossorigin="anonymous"></script> 라고 입력해도 동일하게 뜸
+
+
+아이콘 스크립트 
+<script src="https://kit.fontawesome.com/3c622a9033.js" crossorigin="anonymous"></script>
+
+id = 속성명을 1회만 사용 가능 > #
+class = 속성명을 다회 사용 가능 > .
+
+display: flex; > 한 줄로 정렬
+gap: 20px; > 여백주기
+
+------------------
+*wrap 기능*
+
+    <ul id="list">
+      <li><a href="https://www.naver.co.kr">NAVER</a></li>
+      <li><a href="#">DAUM</a></li>
+      <li><a href="#">Google</a></li>
+      <li><a href="#">Kakao</a></li>
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </ul>
+
+에서 i 가 자동으로 li 로 바꿔주는걸 wrap 기능 
+<i class="fa-solid fa-magnifying-glass"></i> 부분 드래그 후 알트+W 누른다음 테그 바꿔주면 됨
+
+
+------------------
+
+ink + 탭
+
+<link rel="stylesheet" href=""/>에서 ./(상대경로)쓰면 리스트가 뜸 거기서 원하는 스타일 파일 선택
+
+<script defer src="./script.js"></script>
+defer : html 문서도 읽고 script도 동시에 읽으라는 명령어 (비동기화)
+async : 비동기 명령어 중 하나 / but 스크립트 코드가 너무 단순하면 html 읽을 시간을 주지 안하서 전체 문서를 제대로 읽지 못함. 비교적 많이 안 씀
+
+
+
+html 코드 작성 시 위에서 부터 브라우저가 읽다가 
+script 태그를 만나는 순간 해당 파일의 경로로 출동 후 
+해당 스크립트의 데이터를 읽게 됨 (브라우저가 느려짐)
+
+
+  <!--주석 내용--> 주석 / 배포시에는 주석을 없앰. 주석이 있으면 해킹되기 쉬움 / 포폴엔 반드시 넣기
+
+--------------------------
+* 구글폰트 사용법
+https://fonts.google.com/specimen/Orbitron?query=or
+
+
+<link>/ @import 로 가져오는 두가지 방법이 있음.
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poetsen+One&display=swap');
+</style>
+
+에서 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poetsen+One&display=swap'); 만 복사해서 style.css 최상단에 붙여넣는다.
+
+Orbitron: CSS class for a variable style에서 font-family: "Orbitron", sans-serif;만 복사
+이후 style.css 에서 
+body {
+  font-family: "Orbitron", sans-serif;
+}
+복붙해줌
+
+/* CSS 주석 */
+/* variables*/   <---- CSS 변수
+
+/* variables*/
+:root {
+  --orbitron-font-family: "Orbitron", sans-serif;
+}
+:root   : 변수 선언
+--orbitron-font-family: "Orbitron", sans-serif;   : 변수의 키
+
+하단의 
+#naver {
+  font-family: var(--orbitron-font-family);
+}
+
+라고 키를 입력 하면 똑같이 적용되는 것을 볼 수 있음.
+
+----
+
+타 사이트 폰트 가져오기
+원하는 홈페이지 > 관리자 모드 > Network 탭 > Font 탭 누르기 >홈페이지 F5 새로고침 > 사용 중인 폰트 뜸
+> 원하는 폰트 더블클릭으로 다운로드
+
+1980년대 MS + Apple 합작 폰트
+2차 베지에 방식 
+용량이 적음 
+TTF : True Type Font
+
+1990년대 
+MS +Adobe 합작 폰트
+OTF : Open Font Format
+3차 베지에 방식
+용량증가 디자인적으로 훌륭
+디자인성 때문에 맥에 보급이 많이 됨
+
+woff : Web Open Font Format
+----------------
+
+*VS 내용 복사 붙여넣기
+알트+쉬프트 누르고 아래로 누르면 복붙됨
+
+----------------
+
+모든 테그는 자기만의 마진, 패딩값이 있기 때문에 초기화를 해줘야 함.
+
+
+body 이상의 셀렉트 : * (body의 부모 선택자. 최상의 부모요소)
+
+
+상향식 방법
+가장 작은 요소들부터 큰 요소까지 코드를 순차적으로 작성하는 방법
+
+하향식 방법
+
+
+
+
+ul#gnb>(li>a)*3
+ul 클래스 값을 #gnb로 만들어 달라는 명령어
+""사이 알트키로 3개 선택 후 쉬프트+#
+
+
+------------------
+
+/* contents */
+#navigation {
+  display: flex;
+  align-items: center;
+  background: #000;
+  color: #fff;
+  height: 60px;
+  #logo {
+    font-size: 30px;
+  }
+  #gnb {
+    display: flex;
+    gap: 40px;
+  }
+}
+
+CSS 작년에 도입된 네스팅 기능. 스타일 시트 에서 자식 요소를 부모 안에 넣는 기능
+
+
