@@ -192,4 +192,47 @@ cd .. : 현재 위치한 Directory에서 한단계 위 홀더로 이동할 수 �
 
 최초의 컴퓨터 > 여러 개발자들이 각자의 모니터 마우스 키보드를 가지고 공동으로 1대의 컴퓨터를 공유하면서 사용했음 > 내가 접속하고자 하는 폴더와 파일을 타인이 동시 접속하면 충돌이 일어남 > 터미널에서 모여서 공동으로 작업을 진행 함. 
 
+--------------------------------------------------------------------------------
+
+*컨트롤 +` : 누르면 하단에 창이 뜸 + 버튼을 누르면 Git Bash 클릭 
+
+git init : 깃 초기화 
+git add . :  staging area 공간에 더하겠다.
+git status : git 상태 확인. 
+
+https://github.com/MJ-hong0372/kdtfed-241219 깃허브 페이지로 이동 > 
+
+git remote add origin https://github.com/MJ-hong0372/kdtfed-241219.git  문구 복사하기 > 
+
+해당 주소로 보내겠다는 명령어
+
+
+PC와 깃허브 연결이 됨
+git remote -v : 둘 사이 연결 확인
+두 문장이 나오면 정상. fetch / push 두 개가 나와야 함 
+
+----------------------------
+
+*repository로 데이터 옮기기 
+
+git commit -m"원하는 내용" : 나중에 무슨 데이터인지 불러올 때 확인 가능한 문구를 적는다.
+git push origin master : 내 로컬 공간에 있는 폴더 데이터를 깃허브 repository로 보내겠다. 
+
+> Branch
+-1개의 Repostory에는 복수의 Brunch들이 존재한다.
+> 4인 1조 모임 
+1명 : PM 
+3명 : TM 
+
+Detail
+Main // Login // Delivery
+TM이 각 페이지를 동시에 발송하면 충돌이 있기에 각각 개별의 Brunch에 모아두고 나중에 PM이 취합한다.
+
+git push origin master > 입력 후 > Connet to GitHub 가 뜸 >  로그인 하면 데이터를 push하게 됨 
+
+
+>https://github.com/MJ-hong0372/kdtfed-241219 페이지 새로고침 하면 파일이 전송 되었음을 볼 수 있음. 
+
+
+
 
