@@ -1,0 +1,127 @@
+@import "./style/reset";
+@import "./style/variables";
+
+@mixin buttonStyle {
+  color: map-get($contents-colors, textColor);
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  line-height: 44px;
+  width: 360px;
+  height: 44px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+  main {
+    width: 428px;
+    height: 926px;
+    background: map-get($contents-colors, bgColor);
+    box-shadow: 4px 4px 8px rgba($color: #000000, $alpha: 0.6);
+    padding-top: 60px;
+    #topContents {
+      text-align: center;
+      img {
+        margin-bottom: 30px;
+      }
+      h4 {
+        font-size: 1.17rem;
+        font-weight: 300;
+      }
+      span {
+        font-weight: bold;
+      }
+    }
+    #snslogon {
+      text-align: center;
+      margin: 200px 0;
+      h4 {
+        font-size: 0.94rem;
+        font-weight: 300;
+        color: map-get($contents-colors, subColor);
+        margin-bottom: 10px;
+      }
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+    }
+    #bottomContents {
+      .btn {
+        background: map-get($contents-colors, btnColor);
+        @include buttonStyle;
+        .fa-envelope,
+        .fa-download {
+          margin-right: 6px;
+        }
+        .fa-download {
+          transform: rotate(-90deg);
+        }
+      }
+      #userSearch {
+        text-align: center;
+        color: map-get($contents-colors, textColor);
+        font-size: 1.17rem;
+        span {
+          &:first-child {
+            position: relative;
+            margin-right: 78px;
+            &::after {
+              content: "";
+              position: absolute;
+              top: 25%;
+              right: -40px;
+              width: 1px;
+              height: 14px;
+              background: map-get($contents-colors, textColor);
+            }
+          }
+        }
+      }
+    }
+    &.introBg {
+      background: map-get($contents-colors, lighColor);
+      padding: 60px 33px 135px;
+      header {
+        position: relative;
+        width: 100%;
+        height: 142px;
+        h4 {
+          position: absolute;
+          right: 0;
+          top: 0;
+          font-size: 1.17rem;
+          font-weight: lighter;
+        }
+        p {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          font-size: 1.47rem;
+          span {
+            font-weight: bold;
+          }
+        }
+      }
+      section {
+        margin: 50px 0 106px;
+      }
+      footer {
+        .btn {
+          @include buttonStyle;
+          background: map-get($contents-colors, bgColor);
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}

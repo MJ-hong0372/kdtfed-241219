@@ -1,0 +1,13 @@
+margin :특정요소 외부(바깥) 공간의 여백을 설정하는 속성
+
+margin & padding : 1개
+> 상하좌우 모두 동일하게 1개의 값 적용
+
+margin & padding : A B
+>상 하의 값은 A로 적용 // 좌우의 값음 B
+
+margin & padding : A B C
+> 상 값 A // 좌우 B // 하 C
+
+margin & padding : A B C D
+> 상부터 시계방향으로 값을 따로 적용
