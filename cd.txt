@@ -1,0 +1,18 @@
+CUsersbcjrmcd desktop 디렉토리변경
+CUsersbcjrmDesktop mkdir 241217 폴더생성
+CUsersbcjrmDesktop241217 code     VS 파일이 열림
+
+
+
+Cmd 창에서 명령어 입력 후 파일 생성 및 VS 코드 실행법
+
+CUsersbcjrmcd desktop
+
+CUsersbcjrmDesktopmkdir 241217
+
+CUsersbcjrmDesktopcd 241217
+
+CUsersbcjrmDesktop241217 code .
+
+CUsersbcjrmDesktop241217
+
