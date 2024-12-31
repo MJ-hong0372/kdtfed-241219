@@ -2,6 +2,7 @@
 @import "./styles/variables";
 
 @mixin buttonStyle {
+  z-index: 2;
   margin: 0 auto;
   width: 360px;
   height: 44px;
@@ -17,6 +18,7 @@
   background: map-get($contents-colors, lightColor);
   padding: 60px 33px 135px;
   header {
+    z-index: 2;
     position: relative;
     width: 100%;
     height: 142px;
@@ -37,6 +39,20 @@
       }
     }
   }
+}
+
+@mixin filter {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 428px;
+  height: 439px;
+  background: linear-gradient(
+    to bottom,
+    map-get($contents-colors, lighColor) 80%,
+    transparent
+  );
+  z-index: 1;
 }
 
 body {
@@ -136,7 +152,6 @@ body {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        border: 1px solid red;
         ul {
           li {
             text-align: center;
@@ -146,6 +161,32 @@ body {
           }
         }
       }
+      footer {
+        .buttons {
+          position: absolute;
+          bottom: 75px;
+          z-index: 2;
+          display: flex;
+          gap: 12px;
+          .btn {
+            @include buttonStyle;
+            width: 174px;
+            background: map-get($contents-colors, bgColor);
+            &:first-child {
+              background: map-get($contents-colors, btnColor);
+            }
+          }
+        }
+      }
+    }
+    &::before {
+      @include filter;
+      top: 0;
+    }
+    &::after {
+      @include filter;
+      bottom: 0;
+      transform: rotate(180deg);
     }
   }
 }

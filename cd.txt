@@ -6,13 +6,13 @@ CUsersbcjrmDesktop241217 code     VS 파일이 열림
 
 Cmd 창에서 명령어 입력 후 파일 생성 및 VS 코드 실행법
 
-CUsersbcjrmcd desktop
+CUsersbcjrm/ cd desktop
 
-CUsersbcjrmDesktopmkdir 241217
+CUsersbcjrmDesktop/ mkdir 241217
+ 
+CUsersbcjrmDesktop/ cd 241217
 
-CUsersbcjrmDesktopcd 241217
+CUsersbcjrmDesktop/ 241217 code .
 
-CUsersbcjrmDesktop241217 code .
-
-CUsersbcjrmDesktop241217
+CUsersbcjrmDesktop/ 241217
 
