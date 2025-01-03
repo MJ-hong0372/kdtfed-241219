@@ -80,8 +80,21 @@ td(열)은 그룹화 되어있지 않음.
  
 - label :
 >for 속성 => input 태그의 id속성의 값과 동일해 지는 순간 => label & input 태그가 묶임
+>
+
+
 
 14. 공간분할 태그
+block
+
+
+inline
+
+1) 수평 정렬 방식이 상이함
+2) margin, padding 방식이 상이함
+>block 태그는 상하좌우 모두 margin, padding 
+>inline 태그는 특별한 경우가 아니면  margin, padding  좌우측만 적용 가능
+> 부모요소에 flex가 적용되어 있으면 가능함. 
 
 15. Semantic 태그
 
