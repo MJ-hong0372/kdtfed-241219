@@ -1,5 +1,37 @@
 *git-hub 사용법
 
+> 아무 폴더에서나 git init을 하면 안됨
+-git init : 현재 폴더에서 staging area //버전관리 폴더를 이 폴더를 기준으로 하겠다는 명령어 그 폴더에 .git 이라는 버전관리 폴더가 생성되어서 
+상단의 .git 버전관리 폴더와의 충돌이 생김
+
+>배포할 root 폴더로 파일 이동 후 초기화 선언
+git init 
+
+>원격 제어할 repository 주소 입력
+git remote add orgin https://github.com/MJ-hong0372/profile_250109.git
+
+>나의 git-hub와 연결 확인
+git remote -v
+
+>모든 데이터를 대기 공간에 넣겠다
+git add .
+
+>stage 중인 데이터 확인
+git status
+
+>firstCommit이라는 이름으로 데이터를 전달하겠다.
+git commit -m "firstCommit"
+
+>master라는 Branch로 전달하겠다.
+git push orgin master
+
+
+
+
+
+
+
+
 
 git init (초기화)
 

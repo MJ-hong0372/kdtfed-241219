@@ -69,24 +69,105 @@ filter: saturate(0.7); 필터 속성으로 채도값을 0.7 떨어트림.
 --------------------------------------------------------------------------------
 
 * 배포 *
-*Netify //  https://www.netlify.com/
+* Netify //  https://www.netlify.com/
 * git-hub 에 올린 파일이 업데이트 되면 업데이트 된 내용도 자동 배포함.
 
 
+1. Google > Chrome > git 설치
+
+2. cms > 관리자 권한으로 접속 > git -v 엔터 >깃 버전 확인
+- git config --list > 깃 소유주 확인
+
+3. 로컬 컴퓨터에 > git 소유주 정보 등록
+- git config --global user.name "git-hub이름명"
+- git config --global user.email "git-hub 가입 이메일 주소"
+- git config --list (*소유지 주소 정보 조회)
 
 
+4. git-hub 속에 배포하고자 하는 배포전용 repository 생성 해야 함
+
+수료 시기 즈음
+> 본인들의 git-hub 메이크업
+> 포트폴리오 홈페이지 > 개별 포트폴리오 작업물 소개가 필요
+https://github.com/MJ-hong0372/profile_250109
+
+>프로젝트 별로 repository 생성하고 read me 꾸며두기
+
+> 아무 폴더에서나 git init을 하면 안됨
+-git init : 현재 폴더에서 staging area //버전관리 폴더를 이 폴더를 기준으로 하겠다는 명령어 그 폴더에 .git 이라는 버전관리 폴더가 생성되어서 
+상단의 .git 버전관리 폴더와의 충돌이 생김
+
+>배포할 root 폴더로 파일 이동 후 초기화 선언
+git init 
+
+>원격 제어할 repository 주소 입력
+git remote add orgin https://github.com/MJ-hong0372/profile_250109.git
+
+>나의 git-hub와 연결 확인
+git remote -v
+
+>모든 데이터를 대기 공간에 넣겠다
+git add .
+
+>stage 중인 데이터 확인
+git status
+
+>firstCommit이라는 이름으로 데이터를 전달하겠다.
+git commit -m "firstCommit"
+
+>master라는 Branch로 전달하겠다.
+git push orgin master
 
 
+* 기본 배포 준비 완료 *
+
+------------------------------------------------------------------------------
+
+* 배포 하는 법 *
+>>Netify // https://www.netlify.com/ 로 이동 > git-hub로 로그인
+
+- Add new site > Import an existing project 
+> Let’s deploy your project with… 페이지로 이동 
+> git-Hub로 이동 > 원하는 repository 선택 
+> Site name 지정 > Check availablity 버튼으로 사이트명 사용 가능 여부 체크
+> Branch to deploy > Branch가 여러개면 원하는 걸 선택한다.
+> Build command는 나중에는 기재 해줘야 함
+> Deploy mjprofile-250109 버튼 클릭 
+> 완료 
+
+> 수정 된 데이터를 git-hub에 실시간으로 바로 바뀜
+> VScode 에서 > git-hub 확장 앱 버튼 클릭 후 > 상단에 원하는 메세지 쓰고 > 커밋 버튼 누르면 바로 업로드 됨. > 팝업창에서 "예" > 소스제어 옆 ...버튼 > 푸쉬 클릭 > 
 
 
+--------------------------------------------------------------------------------
 
 
+** 다음 과제 부터는 배포 된 제품을 제출해야 함 **
+** 배포 되지 못한 프로젝트는 완성된 게 아님 **
+** VScode 발표는 인정되지 않음 **
 
 
+--------------------------------------------------------------------------------
 
+* transition : 전환 속성 *
 
+> :active  // click 후 반응
 
+> A가 B로 변경되는 순간을 제어할 수 있또록 하는 속성
+> 얼마큼 천천히 // 얼마큼 빨리 // 어느 정도의 시간동안 // 얼마나 기다렸다가
+어느 정도의 가속도로 // 어떤 감속으로
 
+> transition의 대표 4가지 속성
+> transition-property : 어떤 속성(property)요소에 상태 변화를 적용 할 것 인가.
+> transition-duration : 얼마의 시간동안 상태변화를 진행되도록 할 것 인가.
+> transition-timing-function : 어떤 가/감속을 적용할 것인가 ( https://cubic-bezier.com/ )
+> transition-delay : 얼마의 지연 후 상태변화를 진행하게 할 것 인가.
+
+* transition 한 줄로 축약해 쓰기 *
+>> transition : background 1s linear 0s, width 4s esey-out 1s ;
+>> transition : (property) (duration) (timing-function) (delay);
+
+--------------------------------------------------------------------------------
 
 
 
