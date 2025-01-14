@@ -56,6 +56,30 @@ object-fit: cover;
 
 ----------------------------------------------
 
+display: flex;
+flex-wrap: wrap;
+
+&:nth-child(odd) odd -> 홀수
+
+
+position: absolute;
+top: 100%; 부모요소의 높이값만큼 아래로 내리겠다
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
