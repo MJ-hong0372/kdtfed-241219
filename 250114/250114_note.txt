@@ -196,12 +196,16 @@ align-self: flex-end; <-- 이 요소만 시작점을 바꿈.
 window.addEventListener("scroll", () => {
   alert("안녕! 나는 스크롤이야!");
 });
-
+// 브라우저가 가지고 있는 내장객체 
 
 -----------------------------------------------
 
 
-
+window.addEventListener("scroll", () => {
+ if(조건문) {
+  조건문이 참:true이면 실행 
+ }
+});
 
 
 
