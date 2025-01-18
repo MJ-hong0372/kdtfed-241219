@@ -128,3 +128,5 @@ hello(); // hello 라는 함수를 호출
 console.log(typeof hello); // 콘솔에 function라고 타입이 뜸 // 함수의 기원도 객체임.
 
 // 자바스크립트는 객체 지향 언어. 거의 모든 것이 객체에서 파생됨
+
+//

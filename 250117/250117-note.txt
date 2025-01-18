@@ -35,6 +35,20 @@ TIOBE Index (https://www.tiobe.com/tiobe-index/) 사이트에서 언어 통계 �
 
 * javascript *
 
+오늘 배울 것
+
+// 변수
+
+// 자료혐
+
+// 자동 형태 변환 = 자동 형변환
+
+
+// 다음주 주제 연산자 & 제어문
+
+
+--------------------------------------------------------------------------------------------
+
 모든 언어의 기본은 변수에서 부터 시작한다
 
 var : 재선언 재할당 가능
@@ -49,6 +63,95 @@ const : 재선언과 재할당 불가능
 // object = 객체 = 변수에 담을 수 있는 값 중 하나.
 
 // 자바스크립트는 객체 지향 언어. 거의 모든 것이 객체에서 파생됨
+
+
+// 
+
+// 1) 원시 타입
+
+// 2) 참조 타입 
+
+// Spread Operator = 전개연산자 구문
+const favorit = [...fruits]; // ...  <- 깊은 복사
+
+
+JS  : 1개의 JS 파일을 독립적인 요소로 인식
+TS :  node.js 기반으로 컨파일러를 거쳐서 JS로 변환되어서 웹에서 읽혀지게 됨
+node.js 모듈을 가지는데 이 기반에서 변환되기에, 기존 JS 파일에서 모든 사용된 변수명을 죄다 찾아와서 TS와 변수명이 겹쳐서 에러가 뜨게 됨. 
+이럴땐 tsconfig 설정 파일을 만들어서 메뉴얼로 설정하면 에러가 해결 됨. 
+
+
+
+--------------------------------------------------------------------------------------------
+
+
+* 배포 *
+
+* 01. firebase
+https://firebase.google.com/?gad_source=1&gclid=CjwKCAiAnKi8BhB0EiwA58DA4RILKcVaUU18EizbSbawH6_OcTlnvu3eKqZJP8x20S8wvOnBmJAFCxoC_1oQAvD_BwE&gclsrc=aw.ds&hl=ko
+
+1. firebase는 node,js에서 작동한다.
+2. 내 컴퓨터에 nide.js가 설치되어 있어야만 함
+cmd : node -v
+node 설치 하기 https://nodejs.org/ko
+
+3. firebase
+https://firebase.google.com/?gad_source=1&gclid=CjwKCAiAnKi8BhB0EiwA58DA4RILKcVaUU18EizbSbawH6_OcTlnvu3eKqZJP8x20S8wvOnBmJAFCxoC_1oQAvD_BwE&gclsrc=aw.ds&hl=ko
+> 회원가입 후 프로젝트 이름 지정 후 계속
+>구글 애널리틱스 사용 설정 풀기 > 프로젝트 만들기
+> 계속 
+
+4.  사이드메뉴 > Build >호스팅 > 시작하기 
+
+5. 파이어베이스 CLI 설치 : 최초로 번만 설치하면 됨
+npm install -g firebase-tools 복사해서 붙이기
+> 반드시 관리자 권한으로 CMD 설정 후 설치
+
+6. 예외 사항 :
+> 컴픁 시스템 설정 오류 > 파이어베이스가 설정되었음에도 파이어베이스 명령어를 인식 못하는 경우
+>시스템 환경 변수 접속 > 윈도우 + R >시스템 속성 접속 sysdm.cpl ,3 을 넣어주면  고급 탭으로 감 > 환경 변수 > 
+C:\Users\bcjrm\AppData\Roaming\npm 있어야 함
+
+
+7. 보안설정 해제 해야 함
+Windows PowerShell > 관리자로 실행
+> Get-ExecutionPolicy 입력
+Restricted > 엄격한 보안정책 상태임
+보안정책 변경 > Set-ExecutionPolicy RemoteSigned > y 
+> Get-ExecutionPolicy 입력
+RemoteSigned로 변경 됨을 확인한다
+
+
+8 . 업로드 할 파일 VS코드 열고 컨트롤+쉬프트+`  >터미널로 가서 확인한다
+
+npm -v
+
+node -v
+
+9. 배포 세팅
+
+업로드 할 파일 VS코드 열고 컨트롤+쉬프트+`  >터미널로 가서 
+
+firebase login 입력
+firebase init 입력 > 호스팅에서 쉬프트키로 선택 > 엔터 > 
+ Configure as a single-page app (rewrite all urls to /index.html)? No
+? Set up automatic builds and deploys with GitHub? (y/N) n
+
+엔터
+>+  Firebase initialization complete! > 완료됨
+
+> 좌측 메뉴에 public 파일이 생성됨
+> 그 안에 있는 404.html 과 index.html 파일을 삭제한다.
+> public 파일 안에 배포할 모든 파일을 넣는다.
+
+10. 업로드 할 파일 VS코드에서 컨트롤+쉬프트+`  >터미널로 가서  firebase deploy 입력 후 배포
+
+
+> 문제 발생 후 public 폴더에서 배포용 데이터에서 수정하지 말고, 원본 데이터를 수정 후, public 폴더에 수정한 파일을 옮긴다
+> 컨트롤 쉬프트 R을 눌러서 강제로 캐쉬 리셋을 하고 firebase init 부터 다시 한다.
+
+
+
 
 
 
