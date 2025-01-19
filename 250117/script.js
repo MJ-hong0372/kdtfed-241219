@@ -20,7 +20,7 @@
 const num = 1;
 // num이라는 변수를 선언하고 1이라고 할당 함
 
-// 내가 프로그래밍 한 언어가 제대로 작동하고 있는지 사용자 몰래 확인하는 방법 : 콘솔 => console.log(); ()안에 매게변수를 넣어서 작동하는지 확인할 수 있다. 라이브 서버에서 컨트롤+쉬프트+A로 console.log(num); 값인 1이 뜨는걸 확인하면 된다.
+// 내가 프로그래밍 한 언어가 제대로 작동하고 있는지 사용자 몰래 확인하는 방법 : 콘솔 => console.log(); ()안에 매게변수를 넣어서 작동하는지 확인할 수 있다. 라이브 서버에서 Ctrl + Shift + J로 console.log(num); 값인 1이 뜨는걸 확인하면 된다.
 console.log(num);
 
 // 터미널을 열어서 터미널 안에서 코드 실행 정보값을 간단하게 확인 할 수 있다.
@@ -41,8 +41,9 @@ console.log(num);
 let str = "Hello World";
 console.log(str);
 
-// let str = "Me too";
-// console.log(str); 재선언이 불가능함을 알 수 있다.
+let str = "Me too";
+console.log(str); 
+//재선언이 불가능함을 알 수 있다.
 
 str = "Me too";
 console.log(str);
