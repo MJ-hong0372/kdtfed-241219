@@ -90,25 +90,6 @@ Netlify => 소스코드가 git-hub에 올라가 있어야 한다. => 폴더를 �
 
 
 => Netlify ( https://app.netlify.com/ ) 페이지로 이동
-=> Add new site 클릭 => Import an existing project => git-Hub 클릭 => Let’s deploy your project with… 페이지에서 원하는 레파스토리 클릭 => 완료
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

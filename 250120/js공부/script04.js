@@ -53,7 +53,7 @@ console.log(a); */
 // 슬라이드 제작 시 아주 중요한 개념.
 // 자동 슬라이드 => 특정시간마다 슬라이드가 계속 멈춰라 => 함수 / 마우스를 가져다 대면 멈춰라 => 함수 => 두 함수가 충돌하게 됨. call stack 개념이 없기 때문에 그럼. 스텍에 어떤 함수가 먼저 쌓일지를 결정 해서 코딩 해야 함.
 
-function a() {
+/*function a() {
   let x = 1;
   console.log(x);
   x; // 값을 주지 않았다는 것은 참조값을 다시 찾아왔다는 것. 보통 null 이나 undifind가 나올거라고 추측함.
@@ -61,7 +61,7 @@ function a() {
   x = 2;
   console.log(x);
 }
-a();
+a();*/
 
 // 1 1 2 로 불러옴
 // x; console.log(x); 가 null 이나 undifind가 아닌 이유는 호이스팅 때문임.
@@ -83,3 +83,42 @@ a();
 
 //
 //
+
+/* function a() {
+  console.log(b);
+  let b = "bbb"; // 에러뜸. 호출 후 선언이 되어서 에러가 뜨는 것.
+}
+a(); */
+
+/* function a() {
+  console.log(b);
+  b = "bbb"; // b is not defined => b에 선언이 되어 있지 않다는 문구가 뜸
+}
+a(); */
+
+function a() {
+  console.log(b);
+  b = "bbb";
+
+  console.log(b);
+  function b() {}
+
+  console.log(b);
+}
+a();
+
+// 실행 컨테스트가 실행 후 식별자(변수명)을 위로 끌어올림. b라는 변수를 끌어올림. 그런데 b는 let,var,const로 선언 한 적이 없음.
+// 간혹, 전역변수 이후에 특정 함수 안에 있는 연산작업을 통한 결과값을 변수가 가지고 와서 다시 전역변수로 가지고 가는 경우가 있다. let, var, const를 쓰지도 않고 변수를 선언을 하게 되는 것. But 흔한 방법이 아니고 좋은 방법은 아님. 초 우주적 변수가 됨. 어떤 영향을 받지 않는 변수가 되어버림. 부득이한 경우 아닌 경우에만 만들어야 함. 다른 요소들에 어떤 영향을 줄 지 알 수가 없다.
+
+/* function a() {
+  let b;
+  b = function b() {}
+
+  console.log(b);
+  b = "bbb";
+
+  console.log(b);
+  console.log(b);
+}
+a(); */
+// b를 먼저 호이스팅 후, 이후 함수를 함수자체를 위로 가져와버린다. 이때 함수명인 b를 변수명으로 선언해버린다. 위의 let b와 함수명이 겹쳐서  // ƒ b() {}, bbb, bbb 라고 호출이 됨.
