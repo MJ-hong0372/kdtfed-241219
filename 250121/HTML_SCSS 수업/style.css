@@ -1,0 +1,12 @@
+@import url(./styles/reset.css);
+@import url(./styles/variables.css);
+/* common */
+body {
+  font-size: 16px;
+}
+
+/* contens */
+h1 {
+  color: var(--main-light-color);
+  background: var(--main-dark-color);
+}

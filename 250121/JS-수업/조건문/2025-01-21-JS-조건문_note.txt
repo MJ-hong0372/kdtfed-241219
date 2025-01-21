@@ -1,0 +1,93 @@
+* 2025-01-21 - 수업 필기 *
+
+1. 변수
+2. 자료형
+3. 형변환
+4. 연산자
+5. 실행 컨텍스트
+1) variableEnvironment
+2)lexicalEnvironment
+> recordEnvironment 
+> outerEnvironmentReference 두개가 생성이 됨
+> 이 둘로 인해 변수들 찾아 올 수 있음
+3) thisBinding => 실행 컨텍스트 안에 이 3개가 만들어짐
+
+> scope // scopechain 에 대해 알아야
+> * this 객체에 대해 제대로 이해 할 수 있다.
+
+6. 제어문
+> 조건문
+> 반복문
+
+-------------------------------------------------------------------------------------
+
+// if문 : 만약 ~라면 (선택지 1개)
+// if ~else문 : 만약 ~라면, 하지만 만약 ~ 아니라면 (선택지 2개)
+// else if 문 : 만약 ~이거라면, 혹시 아니면 ~은? => 더 다양한 선택지주기 (3개이상 선택지)
+// switch 문 : 여러가지의 선택지를 제공하고, 해당 선택지 가운데에서 어떤 한가지를 선택 했을 때 실행. 결과값을 도출 할 떄 사용. ( 다양한 선택지)
+switch (webPage) {
+  case "네이버":
+    url = "https://www.naver.com";
+  case "구글":
+    url = "https://www.google.com";
+  case "다음":
+    url = "https://www.daum.net";
+} 이대로 쓰면 100% 오류가 뜸.
+스위치 문을 선언 후 끝내고(브레이크) 다음 케이스를 들어가야 함.
+
+
+switch (webPage) {
+  case "네이버":
+    url = "https://www.naver.com";
+    break;
+  case "구글":
+    url = "https://www.google.com";
+    break;
+  case "다음":
+    url = "https://www.daum.net";
+  default:
+    alert("보기 중에 존재하지 않는 사이트 입니다.");
+}
+
+> 케이스가 끝나면 break; 를 써줌
+
+default:
+    alert("보기 중에 존재하지 않는 사이트 입니다.");
+
+==> 예외 값을 정해줌
+
+-----------------------
+NaN = Not A Number
+
+변수 할당 > 자료형 값이 숫자인지 아닌지 여부를 판단하는 방법은?
+
+------------------------
+
+window.location.reload(); 새로고침을 자동으로 해줌
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
