@@ -1,0 +1,23 @@
+@import "./styles/variables.scss";
+@import "./styles/reset.scss";
+
+/* common */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: $main-font-size;
+}
+
+/* contents */
+.frame {
+  border: 2px solid $main-dark-color;
+  padding: 20px;
+  text-align: center;
+  @at-root.heading {
+    font-size: $main-font-size * 5;
+    color: $main-red-color;
+    font-weight: normal;
+  } /* 최상위 root를 기준으로 .heading을 모두 찾아오겠다. */
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="./style.css" /> -->
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      /* h1 {
+          background: crimson;
+        } */
+      p {
+        color: brown;
+        &#special {
+          color: dodgerblue;
+        }
+      }
+      .bgstyle {
+        background: aqua;
+      }
+      /* input {
+        &[type="text"] {
+          background: crimson;
+        }
+        &[type="password"] {
+          background: dodgerblue;
+        }
+      } */
+      #header {
+        & > h1 {
+          color: brown;
+        }
+      }
+      #listEx {
+        #firstLi + li {
+          color: crimson;
+        }
+        #firstLi ~ li {
+          font-size: 30px;
+        }
+      }
+      h3 {
+        &:hover {
+          color: aqua;
+          &:active {
+            color: crimson;
+          }
+        }
+      }
+      input {
+        &:enabled {
+          background: greenyellow;
+        }
+        &:disabled {
+          background: gainsboro;
+        }
+        &:focus {
+          background: tomato;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>오늘은 신나는 금요일</h1>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam
+      assumenda veniam similique, nam eligendi eveniet voluptas ab perferendis
+      labore, tempore officia mollitia, suscipit modi consequatur cum quasi
+      minima quis fugit!
+    </p>
+    <p id="special">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit sit
+      quibusdam est, numquam itaque ab veniam dolorum eveniet eum illum, ipsa
+      deserunt mollitia incidunt vel aliquam? Voluptatum ab sit accusamus! Optio
+      libero eveniet soluta voluptates? Facere asperiores nostrum quo eos
+      aliquid aliquam magnam incidunt a vero, repellendus deserunt, praesentium
+      voluptatum sint saepe. Expedita harum et, autem corporis excepturi aliquid
+      quisquam! Necessitatibus modi ducimus dignissimos velit tempore aperiam
+      quia quam itaque odit illum omnis iure consectetur repellat voluptatum
+      quaerat neque eveniet cumque consequuntur nam, repudiandae aliquid!
+      Laborum officiis aliquid incidunt dicta? Autem eos eveniet tenetur sed.
+      Amet adipisci sed praesentium earum. Laudantium, accusantium ipsam debitis
+      ea dignissimos nam. Iusto, incidunt soluta, optio, quaerat modi odio
+      delectus repudiandae temporibus eum animi velit.
+    </p>
+    <ul id="listEx">
+      <li id="firstLi">첫번째</li>
+      <li class="bgstyle">두번째</li>
+      <li>세번째</li>
+      <li class="bgstyle">네번째</li>
+    </ul>
+    <hr />
+    <form action="">
+      <input type="text" name="" id="" />
+      <input type="password" name="" id="" />
+    </form>
+    <hr />
+    <div id="header">
+      <h1 class="title">Lorem ipsum dolor</h1>
+      <div id="nav">
+        <h1>navigation</h1>
+      </div>
+    </div>
+    <h3>User Action Selector</h3>
+    <hr />
+    <form action="">
+      <h2>Enabled</h2>
+      <input type="text" name="enabled" id="enabled" enabled />
+      <h2>Disabled</h2>
+      <input type="text" name="disabied" id="disabled" disabled />
+    </form>
+  </body>
+</html>

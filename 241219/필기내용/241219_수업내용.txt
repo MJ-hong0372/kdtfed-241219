@@ -1,0 +1,346 @@
+
+*Cmd 창에서 명령어 입력 후 파일 생성 및 VS 코드 실행법*
+
+C:\Users\bcjrm>cd desktop
+
+C:\Users\bcjrm\Desktop>mkdir 241217
+
+C:\Users\bcjrm\Desktop>cd 241217
+
+C:\Users\bcjrm\Desktop\241217> code .
+
+C:\Users\bcjrm\Desktop\241217>
+
+----------------------------------------------------
+
+01. Web Editor 세팅
+> Visual Studio Code
+
+*VScode 리셋 후 재설치 하는 법 
+-C:\Users\bcjrm\.vscode\extensions
+
+이 중 bcjrm는 컴터마다 이름 다름 / 여기가 확창파일이여서 이거 제거 안하면 아무리 VScode 재설치해도 리셋이 안됨
+
+-C:\Users\bcjrm\AppData\Roaming\code 삭제
+
+이후 제어판 VScode 제거해야 완벽하게 깨끗하게 지워짐
+
+*VS 설치 시 반드시 해야 하는 추가 작업 선택 영역
+code로 열기 기능 사용 : 내가 현재 작업하고자 하는 폴더를 Root 폴더로 Root 폴더로 설정한 상태에서 바로 VScode를 활성ㅎㄹ 수 있게 하는 기능을 사용하겠다.는 설정을 해야함. 설치 3번째 단계에서 하단 2개 추가 선택해서 4개 다 선택 후 다음페이지 진행
+
+
+-----------------------------------------------
+
+*표기법
+kdtFed : Cammel -> 국내 가장 선호 공백,띄어쓰기,특수문자가 없어서 코딩 후 읽는 속도가 빠름
+kdt_fed : Sneak
+Kdtfed : H(헝가리 표기법)
+
+-----------------------------------------------
+
+*GUI : Grapic User Interface 방식으로 작업환경 세팅을 함
+
+
+브라우저에서 Chocolatey 검색 (맥 사용 불가) > https://chocolatey.org/ 들어가기 > community 클릭 > Find Packages > mongodb 검색 > 클릭 > Individual > 누르면 To install MongoDB, run the following command from the command line or from PowerShell: 목록에서 <choco install mongodb>라고 뜸 명령어로 설치 한다는 뜻.
+
+이걸 CLI : Command Line Interface 방식이라고 함. 이 방식을 많이 씀.
+
+
+-----------------------------------------------
+
+*CLI 방식으로 폴더 생성 후 VS 프로그램 바로 여는 방법
+
+검색창에서 Cmd 찾기
+*Cmd 창에서 명령어 입력 후 파일 생성 및 VS 코드 실행법*
+
+C:\Users\bcjrm>cd desktop
+
+C:\Users\bcjrm\Desktop>mkdir kdtfed
+C:\Users\bcjrm\Desktop>cd kdtfed
+C:\Users\\bcjrm\Desktop\kdtfed>mkdir (오늘날짜)
+C:\Users\\bcjrm\Desktop\kdtfed\오늘날짜폴더> code. [엔터]
+
+cd: Change Directory
+mkdir : Make Directory
+cd.. : 현재 위치한 Directory에서 한단계 위 홀더로 이동할 수 있게 해주는 명령어
+code . : vscode open.
+
+-----------------------------------------------
+
+VS code 2가지 영역 설정
+
+1) 환경 설정 : ctrl + ,
+- Tab Sixe >기본 들여쓰기 정도 설정 (num : 2)
+- Word Wrap : 가로로 길게 작성된 문장을 자동으로 세로 정렬 시켜주는 설정 (on)
+- Mouse Wheel Zoom : 현재 보고 있는 웹 에디터 줌인/줌아웃 설정
+- emmet > variable > lan > ko : 현재 작업중인 문서의 모국어를 한글로 설정
+
+2) 확장앱 설정
+- Korean Languge Pack
+- Material Icon Theme
+- Live Server : 단축키 : alt + L +O
+- indent rainbow : 자식요소 알아보기 쉽게 들여쓰기에 따라 색으로 표시해 줌
+- Auto Rename Tag : 열고 닫는 태그 한쌍인데, 여는 테그를 변경 시 닫는 테그를 자동으로 바꿔줌
+- HtmltagWrap : 자동으로 현재 선택한 요소의 부모 요소 태그 만들어 주는 요소
+- Html to CSS autocompletion : Html에서 쓴 id class 를 CSS 자동완성으로 가져와줌
+- Html css suport : 
+- CSS peak
+- Turbo JS
+- Live Sass Compiler
+- Prettier : 코딩 문장 오류 알려줌, 설치 이후 설정 필요 > 설정 for 검색 > Defaulf Formatter 에서 선택 . > Format On Save 선택
+*별도 옵션
+- Figma for VS Code
+- Font Awesome Gallery
+- One Dark pro : 시력보호
+- Power Mode : 설정 > Powermode: Enabled 클릭 (파워 코딩 모드) 코딩하는걸 눈에 보이게 시각화
+
+-----------------------------------------------
+
+* git :
+- 형상(형태&상태) 기억 관리 툴
+- 버전 관리 툴
+-로컬 컴퓨터
+
+*깃허브 (GitHub)
+*Hub(통로)
+-git 소유주 정보 : 데이터 업로드가 되어지는 위치 다르게 설정
+
+* 1개의 제품 혹은 서비스 개발 시
+-혼자서 작업
+> 메인 + 서브 + 상세페이지
+
+- 팀 형태로 협업 
+> 메인은 A 가
+> 서브는 B가
+> 상세는 C가 작업
+
+=> 1개의 파일로 병합을 해줘야 함. 
+=> 최종적 병합단계가 아니더라도 중간 단계마다 데이터를 취합해서 1개의 파일로 정리해야 함.
+=> 면접 시 git으로 코딩 내역을 확인하겠다고 요구할 수 있음 
+
+*이전 Git 리셋하기
+- 제어판 > 자격증명관리자 설정 > Windows 자격증명 > 일반자격증명 > git 있으면 제거
+- 제어판 > 프로그램제거 > git 있으면 제거 
+
+버전 1.1.1
+이전버전과 호환불가수준의 새버전/해당 버전 안에서 호환 가능 수준 버전업/소소한 버그 개선
+
+-------------------------------------
+
+*git 설치법
+https://git-scm.com/ > Standalone Installer > 64-bit Git for Windows Setup. > 기본설정대로 설치. 
+
+C:\Users\bcjrm>git -v
+-v : 버전확인
+C:\Users\bcjrm>git config --list
+git의 소유정보 확인 법
+user 네임과 이메일을 적용되어있는지 확인 가능
+
+본인의 컴퓨터에서 어떤 폴더 혹은 어떤 프로젝트에서든지 공통적으로 영향을 미칠 수 있도록 세팅하고자 한다면 "전역"환경 변수 설정을 해야 함 => global(전역) <-> local(지역)
+
+*전역 환경 변수 설정법
+cmd를 관리자 권한 설정으로 다시 열어야 함.
+*github( https://github.com/ )에서 가입된 이름과 이메일로만 세팅해야함.
+*name : MJ-hong0372
+*email : bcjrm0108@naver.com
+
+>CND로 돌아옴
+C:\Windows\System32>git config --global user.name "MJ-hong0372"
+C:\Windows\System32>git config --global user.email "bcjrm0108@naver.com"
+
+각각 입력 후 엔터
+C:\Users\bcjrm>git config --list
+git의 소유정보 재 확인 하면 됨
+
+
+
+-----------------------------
+
+
+* git <-> github 연결
+
+로컬 컴퓨터 어떤 프로텍트 가정!!!!
+> 파일 untracked (추적되지 않은 파일)
+> staging area 공간 (*임시 대기 공간) unmodified (대기상태 파일)
+> 이후 git으로 보내면 파일 commited (*repository 생성 관리)
+
+*개발자가 버전관리 // 1~10 데이터를 몇 회에 나워서 버전 관리를 할지 고민해야 함. 
+-1번에 데이터 1개 버전을 관리하고 싶을 수도 있고
+- 3/ 3/ 4 으로 나눠서 버전 관리를 하고 싶을 수도 있음
+그래서 바로 git으로 보내지 않고 staging area 공간에 unmodified 파일 상태로 존재하게 됨.
+
+
+* git <-> git - hub 연결
+: hub 안에도 repository를 생성해야 함 
+
+https://github.com/MJ-hong0372?tab=repositories 페이지 이동
+
+new 클릭 > Create a new repository 이동 > Repository name* 이름 입력 > Public / Private 중에 결정 > 생성 버튼 클릭 > 생성완료
+
+
+*현재 개발자가 작업중인 폴더 : Working Directory
+
+cd .. : 현재 위치한 Directory에서 한단계 위 홀더로 이동할 수 있게 해주는 명령어
+
+
+* VScode 창에서
+
+` : 뺵틱
+
+*컨트롤 +` : 누르면 하단에 창이 뜸 + 버튼을 누르면 Git Bash 창이 뜸 
+
+
+최초의 컴퓨터 > 여러 개발자들이 각자의 모니터 마우스 키보드를 가지고 공동으로 1대의 컴퓨터를 공유하면서 사용했음 > 내가 접속하고자 하는 폴더와 파일을 타인이 동시 접속하면 충돌이 일어남 > 터미널에서 모여서 공동으로 작업을 진행 함. 
+
+--------------------------------------------------------------------------------
+
+*컨트롤 +` : 누르면 하단에 창이 뜸 + 버튼을 누르면 Git Bash 클릭 
+
+git init : 깃 초기화 
+git add . :  staging area 공간에 더하겠다.
+git status : git 상태 확인. 
+
+https://github.com/MJ-hong0372/kdtfed-241219 깃허브 페이지로 이동 > 
+
+git remote add origin https://github.com/MJ-hong0372/kdtfed-241219.git  문구 복사하기 > 
+
+해당 주소로 보내겠다는 명령어
+
+
+PC와 깃허브 연결이 됨
+git remote -v : 둘 사이 연결 확인
+두 문장이 나오면 정상. fetch / push 두 개가 나와야 함 
+
+----------------------------
+
+*repository로 데이터 옮기기 
+
+git commit -m"원하는 내용" : 나중에 무슨 데이터인지 불러올 때 확인 가능한 문구를 적는다.
+git push origin master : 내 로컬 공간에 있는 폴더 데이터를 깃허브 repository로 보내겠다. 
+
+> Branch
+-1개의 Repostory에는 복수의 Brunch들이 존재한다.
+> 4인 1조 모임 
+1명 : PM 
+3명 : TM 
+
+Detail
+Main // Login // Delivery
+TM이 각 페이지를 동시에 발송하면 충돌이 있기에 각각 개별의 Brunch에 모아두고 나중에 PM이 취합한다.
+
+git push origin master > 입력 후 > Connet to GitHub 가 뜸 >  로그인 하면 데이터를 push하게 됨 
+
+
+>https://github.com/MJ-hong0372/kdtfed-241219 페이지 새로고침 하면 파일이 전송 되었음을 볼 수 있음. 
+
+-----------------------------------------------------------------------------
+이후 변경사항이 생기면 좌측 VScode 창의 허브 아이콘을 눌러서 
+소스 제어 글자 아래에 메시지를 넣어서 커밋 하면 됨> 커밋할 스테이징된 변경사항이 없습니다 팝업창이 뜸 > 예 클릭 > 새 버전이 생기게 됨. > 깃허브에는 아직 업데이트가 안됨 > push 하지 않았기 때문임. > 상단의 소스제어 문구 옆 ... 버튼 누르고 푸시 버튼 > 팝업창 예 > 푸시 완료> Push 후 데이터는 이전 내용을 기억하면서도 항상 최신 버전을 유지하게 되어있음. 
+
+--------------------------------------
+* 현재 Git-Hub에 commit 된 데이터를 다른 컴퓨터에서 내려받아서 사용하는 방법
+
+1. github Repostory 우측 상단 Code 버튼 클릭 후 > zip 파일로 Download 하기
+
+2. 현재 git-hub Repostory Clone(복제)하는 방법
+바탕화면에 clone-git 새폴더 생성 > 코드로 열기 > 터미널 열기(컨트롤+`) > +버튼 누르고 git Bash 클릭 > PowerShell은 고급 명령어를 쓸 수 있는 명령프로포폼임. 
+>깃허브 우측 상단 code 버튼 클릭 후 주소 복사
+> git clone https://github.com/MJ-hong0372/kdtfed-241219.git > 엔터 
+> 복제 끝
+
+> 팀플시 PM이 올려둔 데이터를 clone 해서 변경해서 쓰기에 좋음
+
+>BUT clone 은 최초 탬플릿을 만든 개발자의 모든 히스토리를 다 가지고 오게 됨. 
+>타인의 레파스토리까지 가지고 와서 작업하게 된다는 번거로움
+
+
+3. git pull origin master 
+push<->pull
+최신 버전 데이터만 가져오겠다. 
+
+
+바탕화면에 pull-git 새폴더 생성 > 코드로 열기 > 터미널 열기(컨트롤+`) > +버튼 누르고 git Bash 클릭 > git init (.git 생성 명령어)>
+git pull https://github.com/MJ-hong0372/kdtfed-241219.git
+
+
+*다운받은 내용을 다른 곳에서 작업 후 재 업로드 하는 방법 *
+
+git add . > git status > git commit -m "241219-02" > 
+git push origin master를 입력하면 리무트 권한이 없어서 안됨 > 
+https://github.com/MJ-hong0372/kdtfed-241219 페이지로 들이가서 code 버튼 누르고 주소 복사 > 
+git remote add origin https://github.com/MJ-hong0372/kdtfed-241219.git 으로 권한 부여 > 다시 git push origin master 입력하면 올라감 
+
+--------------------------------------
+* PC가 다를 경우, 집에서 작업한 PC의 내용을 학원의 PC는 모르기에 에러가 뜸
+
+집에서 작업한 내용을 학원에서 불러오지 않고 
+학원에서 작업 후 github에 올리려고  git add . 명력어를 주면 업로드 됨
+git status 로 내용을 확인해 보면  modified 된 파일이 보이게 됨
+git commit -m "241219-04"으로 commit 함
+git push origin master로 파일올리게 되면 오류가 뜸.
+pull을 하라는 메세지가 뜸. 
+
+그래서 git push origin master 라고 하면
+merge(병합)하라고 뜸 엔터를 침. 변화가 없음
+그 다음 화면 끔. 그냥 다시키면 m이라고 병합중이라고 뜸
+데이터 날라가도 됨 복구하면 됨
+
+다시 불러옴 
+git commit -m "201219-04" 치면 합병된게 나옴
+
+git push origin master 으로 다시 최종버전으로 올림
+
+--> 집과 학원에서 작업한게 합병된 최종본이 깁허브에 올라감
+-----------------------------------------------------------------------------
+*개인 노트북에서 보안 때문에 명령어가 적용이 안될 떄 환경변수 설정 > 윈도우+R > 실행 창에서 sysdm.cpl 검색 > 시스템 속성 > 고급 > 환경 변수 클릭 > 시스템 변수의 Path 클릭 후 편집 > 새로 만들기 > 찾아보기 버튼 > user 폴더 안에 AppData > Local > 확인  해당 요소에 있는 명령어 값들을 가져다 쓰겠다고 설정 완료 됨
+
+-----------------------------------------------------------------------------
+
+좌측 레이어 패널 : 현재 작업중인 레이어간 계층 구조 확인
+우측 속성 패널 : 레이어 안에 있는 컨텐츠들의 세부적인 속성 정보 입력 수정 삭제 등을 할 수 있는 영역.
+가운데 캔버스 : 실제 UI 작업을 진행 할 수 있는 그림판 공간
+-작업 단위 : frame : 단축키 F
+
+피그마 기본화면 좌측하단 - Explore Community
+
+-----------------------------------------------------------------------------
+
+기기별 대표 화면사이즈
+-1440px = 12*120
+-1920px = 12*160
+-420px = 12*35
+-360px = 12*30
+
+=> 10과 가까운 숫자 가운대 최대공약수를 가장 많이 가지고 있는 숫자.
+최대공약수 -> 반응형 웹 페이지와 연관이 있음.
+-desktop
+-mobile
+
+화면 별 대응할 숫자가 많아진다는 의미임.
+화면을 12등분해서 설계해야 함.
+모바일은 12의 최대 공약수 중 하나로 레이아웃을 짜야 함
+-----------------------------------------------------------------------------
+
+390px 화면에서 
+좌우여백 35px 35 > 70px
+남은 여백 320px
+5*4 = 20px
+ 
+실제 쓸 수 있는 면적 = 300px
+
+-----------------------------------------------------------------------------
+
+
+레이아웃 그리드
+>개인 프로젝트
+>팀프로젝트
+
+프론트엔드 영역 공부
+>화면 구성
+> 레이아웃 그리드
+구성에 힘쓰기 
+
+-----------------------------------------------------------------------------
+
+
+Autolayout : 쉬프트+A 

@@ -1,0 +1,154 @@
+# 241219 (목) 공부사항 정리 및 복습 #
+
+*git 
+-형상 기억 및 버전 관리 툴
+-로컬 컴퓨터 대 사용 할 수 있는 프로그램
+-git 공식 사이트 다운로드
+-git-hub 사이트 회원가입
+
+-내 로컬 컴퓨터 내 git 소유주 정보 등록
+>cmd(*관리자모드)로 접속
+> git config -- global user.name "git-hub name정보"
+> git config -- global user.name "git-hub email정보"
+>위 정보가 정상적으로 잘 입력되었는지 조회명령어 > git donfig --list
+
+-로컬 컴퓨터 > 작업 폴더 생성(*Working Directory라고 부름)
+-신규 생성된 작업폴더 > pire data 가 존재 (*index.html)
+-신규 생성된 작업폭더 > git init(*버전을 관리하기 위해 초기에 세팅을 병령하는 명령어)=> stging area // repository를 사용하기 위한 목적
+-원래 pure data 상태였던 파일이 untraked data가 됨
+- untraked data를 staging area를 보관시키기 위해 : git add . 명령어 사용
+-정상적으로 staging area에 잘 보관 되었는지 확인 : git status
+- staging area는 실제 형상 및 버전 관리를 해주는 resository 공간으로 넘어가기 전 단계의 임시 저장소
+- staging area 보관된 data: unmodified data
+-어떤 이름 // 어떤 목적 => 명시적으로 알 수 있도록 이름을 붙여줘야 함
+- staging area=>  resository : git commit -m "241220"
+-위 단계까지가 내 로컬 컴퓨터 내 git을 활용해서 형상기억 및 버전 관리 하는 단계!!
+>현재까지의 단계의 단점 : 내 로컬 컴퓨터에 존재하는 해당 데이터는 같이 협업하는 다른 개발자들은 볼 수 없다는 단점이 존재함.
+
+그래서 나온게 깃 허브
+
+*git-hub
+-로컬 컴퓨터 내 관리되고 있는 data를 원격 저장소 내 repository를 끌어와서 보관 관리 저장 공유 해줄 수 있는 hub와 같은 역할을 하는 cloud platform service 사이트 
+- git-hub 내 repository를 신큐 생성
+
+* git & git-hub 연결방법
+-내 로컬 컴퓨터 터미널 > git remote add orgin "내 git-hub repository 주소"
+-원격 repository & 로컬 repository가 정상적으로 연결 되었는지 확인하는 방법
+>터미널 : git remote -v => fetch() // pull 정상적으로 출력된다면 잘 연결!!
+
+
+* git & git-hub 정상적 연결 되었다는 전제하에
+-내 로컬 컴퓨터 터미널 > git push origin(=so git-hub repository 주소) master 이볅
+> 내 로컬 컴퓨터 데이터를 git-hub repository로 전송 가능
+(*origin : repository의 short name)
+
+
+*git-hub 올린 data 내려받는 방법 3가지
+-내려받고 싶은 repository에 접숙 후 우측 상단 "code" 녹색 버튼 클릭 후 ZIP 다운
+-로컬 컴퓨터에 신규 폴더 생성 후 해당 폴더에서 VScode 오픈
+> 하단 터미널 접속 : git clone git-hub repository 주소
+(*최초에 git clone git-hub repository에 데이터 업로드한 개발자의 .git까지 모두 복제해온다.)
+
+-로컬 컴퓨터에 신규 폴더 생성 후 해당 폴더에서 VScode 오픈
+>하단 터미널 접속 :
+git init
+git pull git-hub repository 주소
+
+
+-------------------------------------------------------------------------------
+
+*git fork : 타인의 git-hub 내 repository를 즐겨찻기 처럼 내 repository
+>원래 fork의 의미는 타인의 repository안에 어떤 데이터 정보들을 내가 업데이크하고 공유함으로 인해서 더 좋은 데이터로 발전 시킬 수 있도록 하기 위한 목적
+
+>공동 개발 시 타인이 수정한 내용들이 다수 일때, 나는 해당 내용 들 중에서 원하는 것만 선택 취사해서 허가해서 그 부분만 수정 적용 할 수 있다. (순기능이지만 크게 사용하지는 않는다. 동업자가 아닌 이상.)
+
+
+* 강사님 주소 https://github.com/Divjason/kdtfed-241219 로 들어가고 fork 클릭> 이름 작성 > Create fork 클릭
+
+
+>repository 내에서의 clone
+
+ -로컬 컴퓨터에 신규 폴더 생성 후 해당 폴더에서 VScode 오픈
+> 하단 터미널 접속 : git clone https://github.com/Divjason/kdtfed-241219.git 입력
+> 이후 수정 후
+터미널에서 cd (.git 파일이 있는 파일위치명)로 이동함 
+이전 터미널 닫고 새 터미널을 열음.
+git remote add upstream https://github.com/Divjason/kdtfed-241219.git 로 원본 값과 싱크를 맞추겠다는 초기화를 해줌
+>업로드 안된 파일을 git
+
+*git-hub 에서는 txt 확장자 대신 md를 씀
+
+-------------------------------------------------------------------------------
+
+* 팀 프로젝트 git & git-hib 사용법
+
+CEO
+Freshman
+두 사람이 작업을 함
+
+CEO> Master 폴더생성 > VS 파일 생성 > 깃허브 새 repostory 생성 > 파일올림 >
+Freshman이 clone > Freshman이 작업한 업로드를 위해
+터미널에서
+git add
+git commit -m "freshman"
+git push orgin master
+
+라고 업로드 하면 절대 안됨. 
+이건 혼자 하는 작업임
+절대 MASTER 폴더 건들이면 안됨 최종본 파일 올라가는 곳임
+
+
+*Branch : 최상위 repository 폴더 안에 하위 세부 폴더임
+현재 Company-project repository 
+- master : CEO
+- Freshman : Freshman 용 하위 폴더에 올린다
+이 때 쓰는 업로드 명령어
+git checkout -b Freshman //기존 Branch 체크아웃 하고 새로운 Freshman 이라는 새 Branch 만들거다.
+
+이 상태로 VScode 터미널에서 
+git add
+git commit -m "freshman first commit"
+git push orgin freshman  // master가 아니라 Freshman 이라는 새 Branch로 push 해달라는 뜻
+
+
+git-hub 홈페이지에서 master 버튼 클릭 하면 새로 생긴 Freshman 이라는 새 Branch 폴더와, 새 파일을 확인 할 수 있게 됨. 
+
+수정사항 깃허브에 업로드 후에 Compare & pull requests 버튼이 뜸 
+여기에 Freshman이 버튼 눌러서 제목과 수정 사항 본문을 적어서 보내면 됨 
+그러면 확인 해달라는 요청이 들어감
+
+CEO가 해당 메세지를 확인 후 하단의 파일명을 누르면 실시간으로 비교가 가능함
+그 다음 Add a comment 로 의사표현이 됨.
+그 다음 Mater권한이 있는 CEO가 Merge 버튼을 눌려서 병합을 시키게 됨.
+
+***BUT!!!!!!! CEO 또한 data 그사이 수정을 한 사항이 있다면 병합 시 문제가 생김***
+
+혹은 4명이 동시 작업
+master (*최신버전)
+1 : PM
+> 월 / 몇시 / 몇 분에 4번 님 데이터 merge 했으니 다들 pull 받아주세요.라고 반드시 즉시 공지해야함.
+2
+3
+4 : 작업물 병합 요청한 당사자
+
+병합한 PM인 1번과 4번만 이 상황을 알게 되고 변경사항을 2,3번은 내용을 모르게 됨.
+이후 다음 사람들은 master 버전이 달라져버려서 본인 작업물이 push가 아예 안됨.
+
+그러면, 작업 시작시에 CEO도 최신 master 버전 다운로드 전에 깃 허브 상의 data에 내 로컬 repository 상에 저장 해둬야 함. 
+병합 전 내 버전 저장 안하면 다 날라감
+내 작업물 VS code 터미널에서
+git add .
+git commit -m "second commit"
+git full orgin master 입력 > 본문 창에 현재변경사항(내가 만든 내용 ) / 수신변경사항 (타인이 작업한 내용) 두개가 뜸 > 여기서 병합 완료하면 더이상 수정 불가능해짐. 
+> 완료 하면 4번 작업물 가지고 내가 작업하면 됨
+
+git push orgin master > CEO와 Freshman 두 사람의 병합 작업물이 git-hub에 최종본으로 올라감.
+
+
+
+
+
+
+
+
+

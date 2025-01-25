@@ -1,0 +1,120 @@
+* 250106 수업 필기
+
+> max-width // max-height
+
+> min-width // max-height
+- 부모요소의 너비값이 줄어들 떄 같이 비례해서 줄어들더라고 최소한의 너비값 이상으로 줄어들게 되면 그대에는 더이상 같이 줄어들게 하지 않고 min-width 값을 적용시키겠다는 의미
+
+
+-----------------------------------------------------------------------
+
+*Color
+statcouner
+
+* 가산혼합 : 색을 더할 수록 하얀색에 수렴
+
+* 웹 화면 출력 : RGB 기법
+- Red Green Blue => 색의 3원색
+
+* 2의 4제곱  2의 4제곱 => 2의 8제곱 => 256 색
+> 바이너리 코드 : 0,1 =>단위 bit
+> 컴퓨터 원할한 처리를 위해 8 bit => 1byte => 2의 8제곱 
+> 웹 색 조합 => 1byte 를 넘어갈 수 없음
+
+* 16진수의 가장 큰 숫자 => f => 2의 4제곱 
+0~9 / a~f
+> Hex 코드
+> 6각형을 Hexagon이라고 부른다
+
+#ff ff ff => white = > rgb(255,255,255)
+> rgba(255,255,255, 0.5) > a: 불투명도 : alpha : 최대치 1
+> 바이너리 코드 상 0부터 시작하기에 255개 색이 있는 것
+
+-----------------------------------------------------------------------
+
+-CSS 속성
+>단위
+>색상
+>가시속성 (가독성)
+
+- display 
+> block : 공간을 만들면서 동시에 사용자 눈에 보이게 함 : none 속성의 반대의 의미를 가지고 있는 속성 / 공간을 만들어 줌
+
+> inline : 특정 요소가 보여질 수 있도록 하는 속성
+
+> inline-block : 특정 요소가 보여질 수 있도록 하는 속성 
+- 만약 inline-block 속성안에 담겨이쓴 요소들이 하나의 생을 벗어나는 경우에는 block 처럼 독립적으로 사용
+- 만약 inline-block 속성안에 담겨있는 요소들이 하나의 행 안에서 소화될 수 있는 경우에는 inline처럼 한 행을 공유해서 사용.
+- width와 height 값을 부여하기 위해 사용
+
+> inline vs inline-block
+1) 너비, 높이 값을 적용 받을 수 있는가
+2) 마진, 패딩 값을 어디가지 적용받을 수 있는가
+3) inline 속성은 마진을 좌우만 적용됨 / inline-block은 상하좌우 모두 가능함 
+
+> none : 특정 요소를 보이지 않도록 && 공간을 없애는 속성
+
+- visibilty
+visibility: hidden; > 공간은 남겨두고 숨기기
+
+-----------------------------------------------------------------------
+
+>박스 속성
+- margin : 특정 요소 바깥 공간(*여백)을 얼만큼 부여할 것 인가에 대한 스타일 속성
+- padding : 특정 요소 내부 공간(*여백)을 얼만큼 부여할 것 인가에 대한 스타일 속성
+- box-sizing 
+ box-sizing: border-box; : 입력한 너비, 높이 값을 절대적으로 지키게함 
+box-sizing: content-box; : 내부 컨텐츠 값에 따라 유동적으로 사이즈를 가변함
+
+-----------------------------------------------------------------------
+
+*테두리 속성
+
+- border : 테두리 
+border-width: 8px;
+border-style: solid;
+border-color: #000;
+=> border: 8px solid #000; 줄여 쓸 수 있음
+
+- border-radius : 값이 커질수록 반지름에 수렴함. 전체 반지름 값이 최대 값. 반지름 값 = 50% 가 최대치, 입력 시 원이 됨. 
+- 1개만 쓰면 모든 모서리 값을 공통으로 똑같이 맞추게 됨
+- 왼쪽 상단부터 시계방향으로 각각의 모서리 값을 따로 줄 수 있음.
+
+-----------------------------------------------------------------------
+
+*배경 속성
+
+- background : 배경
+background-color: #e7e7e7;
+background-image: url(./img/BackgroundFront.png),
+url(./img/BackgroundBack.png);
+background-size: 100%;
+background-position: bottom;
+background-attachment: fixed;
+background-repeat: no-repeat;
+
+=> background: url(./img/BackgroundFront.png) bottom/100% no-repeat fixed, #e7e7e7 url(./img/BackgroundBack.png) bottom/100% no-repeat fixed;  줄여 쓸 수 있음
+
+-----------------------------------------------------------------------
+
+* font 속성
+- font-size : 글씨 크기
+- font-family : 글씨 서체
+- font-weight : 글씨 두께 / normal = 400
+- line-height : 텍스트 사이의 글자 높이 값
+- font-style : 
+
+
+font-size: 2rem;
+font-weight: 800;
+font-family: Arial, Helvetica, sans-serif;
+line-height: 400px;
+color: red;
+text-align: center;
+
+=>  font: 800 2rem/400px Arial, Helvetica, sans-serif; 줄여 쓸 수 있음
+
+
+-----------------------------------------------------------------------
+
+

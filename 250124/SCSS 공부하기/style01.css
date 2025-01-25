@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+}
+body .complete {
+  width: 150px;
+  height: 100%;
+  background: #fff;
+  cursor: pointer;
+  margin: 0 20px;
+  padding: 0.8rem;
+  border-radius: 0.4rem;
+  font-size: 1.92rem;
+  transition: background 0.3s, color 0.3s;
+  border: 3px solid crimson;
+  color: crimson;
+}
+body .complete.complete:hover {
+  background: crimson;
+  color: #fff;
+}
+body .complete.loading:hover {
+  background: royalblue;
+  color: #fff;
+}
+body .complete.errer:hover {
+  background: green;
+  color: #fff;
+}
+body .loading {
+  width: 150px;
+  height: 100%;
+  background: #fff;
+  cursor: pointer;
+  margin: 0 20px;
+  padding: 0.8rem;
+  border-radius: 0.4rem;
+  font-size: 1.92rem;
+  transition: background 0.3s, color 0.3s;
+  border: 3px solid royalblue;
+  color: royalblue;
+}
+body .loading.complete:hover {
+  background: crimson;
+  color: #fff;
+}
+body .loading.loading:hover {
+  background: royalblue;
+  color: #fff;
+}
+body .loading.errer:hover {
+  background: green;
+  color: #fff;
+}
+body .errer {
+  width: 150px;
+  height: 100%;
+  background: #fff;
+  cursor: pointer;
+  margin: 0 20px;
+  padding: 0.8rem;
+  border-radius: 0.4rem;
+  font-size: 1.92rem;
+  transition: background 0.3s, color 0.3s;
+  border: 3px solid green;
+  color: green;
+}
+body .errer.complete:hover {
+  background: crimson;
+  color: #fff;
+}
+body .errer.loading:hover {
+  background: royalblue;
+  color: #fff;
+}
+body .errer.errer:hover {
+  background: green;
+  color: #fff;
+}

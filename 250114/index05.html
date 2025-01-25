@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .layout {
+        width: 500px;
+        border: 5px solid green;
+        .parent {
+          display: flex;
+          div {
+            width: 300px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            background: crimson;
+            color: beige;
+            margin: 5px;
+            &:nth-child(1) {
+              flex-shrink: 1;
+            }
+            &:nth-child(2) {
+              flex-shrink: 2;
+            }
+            &:nth-child(3) {
+              flex-shrink: 1;
+            }
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="layout">
+      <div class="parent">
+        <div class="child1">1</div>
+        <div class="child2">2</div>
+        <div class="child3">3</div>
+      </div>
+    </div>
+  </body>
+</html>

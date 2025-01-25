@@ -1,0 +1,131 @@
+* 웹 표준 : 웹 브라우저에서 구현 될 수 있도록 코드를 작성하는 것을 정석에 맞춰서 사용하는 것.
+
+* HTML 5.0 : 
+Hyper Text Markup Language
+Animation => 3D
+16~18개 정도 테그를 씀
+Dummy Text = 의미가 없는 문자열의 집합
+>lorem
+
+*single Tag(홑태그) => 여는 것과 동시에 닫는 역할을 하는 태그
+- <hr />, <br />, <img />, <input />
+
+*Multi Tag(쌍태그) => 여는 것과 닫는 태그를 별도로 사용하는 태그
+- <hn></hn>
+
+================================
+
+1. h(n = 변수값)
+h1 = 가장 큰 text / h2 / h3 / h4 / h5 / h6 = 가장 작은 text
+>heading : 머리글 대표
+
+2. p = paragraph
+
+3. hr = Horizontal Ruler = 수평자 = 가로선
+
+4. br = break
+
+5. a =anchor / 
+- 기본 속성(*attribute)을 반드시 유지해야 하는 태그
+- href="#" / hyper reference
+- target ="_blank" /
+- 내부 이동 기능 태그에 id 값 부여 후 href="#이동대상id"
+
+6. b = bold
+두꺼운 서체
+
+7. i = italic
+기울여진 서체
+
+8. List Tags = 목록
+- ol = order list (*부모)
+- ul = Unoder list (*부모)
+- li = list (*자식)
+
+*"중첩"목록 > 목록 안에 또 다른 목록
+
+9. Table Tags = 테이블 표를 만들기 위한 태그
+> 행 row : 가로 줄
+> 열 column : 세로 줄
+- table
+- tr (행) > table row
+- th > table Hea야ㅜㅎ (* 제목처럼 강조되는 행)
+- td(열) > table data (*생성된 행 안에 열을 만들고자 할때)
+- thead : 테이블 태그 내 머리 역할 (필수아님)
+- tbody : 테이블 태그 내 몸통 역할
+- tfoot : 테이블 태그 내 다리 역할 (필수아님)
+- colgroup : 테이블 내 열의 그룹화 / tr(행)은 이미 그룹화 되어있으나
+td(열)은 그룹화 되어있지 않음.
+- col : colgroup 안에서 몇 번째 열을 지칭해서 가져올 것인지 결정 span으로 몇번째 열인지 구별하면 됨 span="1" <- 처럼 속성값 부여
+- caption : table 내 전용 타이틀 목록을 지정하고자 할 때 중앙정렬
+- colspan : 테이블 내 열 병합 속성 값<th colspan="2">
+- rowspan : 테이블 내 행 병합 속성 값
+- figure = 테이블 관련 기타 요소 쓸 때 바깥에서 부모요소로 씀
+>figcaption로 제목 부여 / 중앙정렬은 아님.
+
+10. img
+- src = > source (경로) => a 태그의 href 속성과 비슷
+- alt => alternte (접근성)
+
+
+11. audio
+
+12. video
+
+13. form
+> action : 사용자가 사용할 보낼 서버의 주소
+> method : 클라이언트와 서버가 통신을 하는 방법
+> get : 클라이언트와 서버가 통신을 하는 방법
+> post : 클라이언트가 사용자에게 특정값을 받아서 서버의 공간에 해당 값을 업데이트 시키는 역할 (댓글)
+ 
+- label :
+>for 속성 => input 태그의 id속성의 값과 동일해 지는 순간 => label & input 태그가 묶임
+>
+
+
+
+14. 공간분할 태그
+block
+
+
+inline
+
+1) 수평 정렬 방식이 상이함
+2) margin, padding 방식이 상이함
+>block 태그는 상하좌우 모두 margin, padding 
+>inline 태그는 특별한 경우가 아니면  margin, padding  좌우측만 적용 가능
+> 부모요소에 flex가 적용되어 있으면 가능함. 
+
+15. Semantic 태그
+
+
+================================
+
+* CSS 3.0 : 
+Cascading Style Sheet
+언어가 아닌 보조적 역할
+동적인 펭지 구현 기능 가미
+
+> 언어의 발달에 따라 시대가 변하나
+> 시대에 따라 언어가 바뀌냐 <-- 이쪽이 맞음
+
+개발 => creative (*무 => 유 창조)
+//언어에 대한 이해
+// 문제해결 논리적 사고
+//필수문법
+
+-----------------------------------------------------------------------------
+
+
+*
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,46 @@
+@import url("./styles/reset.css");
+@import url("./styles/variables.css");
+@import url("./styles/fonts.css");
+
+/* commen */
+@font-face {
+  font-family: "Nexon Lv1 Gothic";
+  src: url("./fonts/NEXON\ Lv1\ Gothic\ OTF.woff") format("woff");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Nexon Lv1 Gothic Bold";
+  src: url("./fonts/NEXON\ Lv1\ Gothic\ OTF\ Bold.woff") format("woff");
+  font-weight: 700;
+}
+
+body {
+  font-family: "Nexon Lv1 Gothic";
+  font-weight: 700;
+}
+
+/* contents */
+#container {
+  width: 100%;
+  #navigation-heading {
+    width: 100%;
+    height: 60px;
+    background: #000;
+    #navigation {
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 1190px;
+      color: #fff;
+      height: 100%;
+      #logo {
+        font-size: 30px;
+      }
+      #gnb {
+        display: flex;
+        gap: 40px;
+      }
+    }
+  }
+}

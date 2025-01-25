@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#container {
+  height: 200px;
+  width: 100%;
+  min-width: 800px;
+  main {
+    height: 50%;
+    width: 100%;
+    border: 1px solid red;
+    p {
+      height: 300px;
+    }
+  }
+}

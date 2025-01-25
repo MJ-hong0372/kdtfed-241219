@@ -1,0 +1,17 @@
+/* reset */
+@import url(./styles/reset.css);
+
+/* variables */
+@import url(./styles/variables.css);
+
+/* common */
+body {
+  width: 100%;
+  font-size: 16px;
+}
+
+/* contents */
+h1 {
+  color: var(--main-light-color);
+  background: var(--main-dark-color);
+}

@@ -1,0 +1,35 @@
+
+
+media-query에 대응해서 반응형 페이지로 만들기 위해 화면을 12로 나누고 12의 최대공약수 중 하나로 그리드를 잡는다. 데스크탑 12개 / 태블릿 6개 / 휴대폰 3개 등
+
+그라디언트 색 추천 사이트
+https://webgradients.com/
+
+dummy (의미가 없는) 문장
+> VS code에서는  Lome 라고 함.
+
+--------------------------------------------------------------
+
+h1 = 32px = 2em 
+h4가 font-size= 0 이므로 기본 폰트 사이즈임을 알 수 있다.
+h4 = 실제 사이즈는 16px
+
+em : element : 부모요소가 가지고 있는 속성 값
+
+h1 = 2em = 16*2 = 32px
+h2 = 1.5em = 16*1.5 = 24px
+1.17em = 16*1.17 = 18px
+
+rem = root element : 실제 현업에서 쓰는 수치 : 최상위 부모 요소에 따라 자동 계산 되어서 영향을 받는 폰트 사이즈 요소
+=> body에 font-size 주면 끝. 
+
+
+flex => 반응형에 대응하기 위해 나온 개념
+-----------------------------------------------------------
+
+일반구조선택자 : &:first-child 
+-----------------------------------------------------------
+시뮬레이터 : https://chromewebstore.google.com/?utm_source=ext_app_menu 
+크롬 확장 프로그램 설치 해야 함 
+
+https://chromewebstore.google.com/detail/%EB%AA%A8%EB%B0%94%EC%9D%BC-%EC%8B%9C%EB%AE%AC%EB%A0%88%EC%9D%B4%ED%84%B0-%EB%B0%98%EC%9D%91%ED%98%95-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EB%8F%84%EA%B5%AC/ckejmhbmlajgoklhgbapkiccekfoccmk?utm_source=ext_app_menu
