@@ -1,5 +1,7 @@
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=652EA8&height=200&section=header&text=Wellcome&fontSize=50&fontColor=ffffff" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=652EA8&height=200&section=header&text=Wellcome&fontSize=40&fontColor=ffffff" />
+
+<div align= "center"> 
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=652EA8&width=435&lines=Hello%3F+Wellcom+to+my+GitHub!)](https://git.io/typing-svg)
 
@@ -9,10 +11,12 @@
 ![js](https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white)
 ![js](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white)
 
-![mazandi profile](http://mazandi.herokuapp.com/api?handle={bcjrm0108}&theme=cold)
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=MJ-hong0372)](https://github.com/kdtfed-241219/github-readme-stats)
 [![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=MJ-hong0372)](https://github.com/kdtfed-241219/github-readme-stats)
+</div>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=652EA8&height=200&section=footer&text=Thank%20You&fontSize=40&fontColor=ffffff" />
 
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=652EA8&height=200&section=footer&text=Thank%20You&fontSize=50&fontColor=ffffff" />
+
