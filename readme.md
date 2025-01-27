@@ -3,7 +3,8 @@
 
 <div align= "center"> 
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=652EA8&width=435&lines=Hello%3F+Wellcom+to+my+GitHub!)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Noto+Sans&size=30&pause=1000&color=652EA8&width=435&lines=Hello%3F+Welcome+to+my+GitHub!)]
+
 
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FMJ-hong0372%2Fkdtfed-241219.git&count_bg=%230F0357&title_bg=%23652EA8&icon=github.svg&icon_color=%23FFFFFF&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 
