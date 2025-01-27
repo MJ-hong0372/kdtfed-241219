@@ -1,10 +1,9 @@
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=652EA8&height=200&section=header&text=Wellcome&fontSize=40&fontColor=ffffff" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=652EA8&height=200&section=header&text=Welcome&fontSize=40&fontColor=ffffff" />
 
 <div align= "center"> 
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Noto+Sans&size=30&pause=1000&color=652EA8&width=435&lines=Hello%3F+Welcome+to+my+GitHub!)]
-
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Noto+Sans&size=30&pause=1000&color=652EA8&width=435&lines=Hello%3F+Welcome+to+my+GitHub!)](https://git.io/typing-svg)
 
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FMJ-hong0372%2Fkdtfed-241219.git&count_bg=%230F0357&title_bg=%23652EA8&icon=github.svg&icon_color=%23FFFFFF&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 
