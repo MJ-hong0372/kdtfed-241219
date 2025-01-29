@@ -16,6 +16,8 @@
 [![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=MJ-hong0372)](https://github.com/kdtfed-241219/github-readme-stats)
 </div>
 
+<img src="https://github.com/{MJ-hong0372}/{MJ-hong0372}/blob/output/github-contribution-grid-snake.svg"/>
+
 <img src="https://capsule-render.vercel.app/api?type=waving&color=652EA8&height=200&section=footer&text=Thank%20You&fontSize=40&fontColor=ffffff" />
 
 
