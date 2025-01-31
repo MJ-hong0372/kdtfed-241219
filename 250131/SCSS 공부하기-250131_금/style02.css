@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.btn, body .checkout, body .add, body .order {
+  width: 200px;
+  height: 100%;
+  padding: 7px;
+  margin: 0 29px;
+  cursor: pointer;
+}
+
+body {
+  font-size: 1.6rem;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .order {
+  background: crimson;
+  color: #fff;
+}
+body .add {
+  background: royalblue;
+  color: #fff;
+}
+body .checkout {
+  background: green;
+  color: #fff;
+}
