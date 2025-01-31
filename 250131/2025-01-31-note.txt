@@ -230,11 +230,21 @@ JS 에서 console.log(document.querySelectorAll("#desc p")[0].classList); 로 �
 !userName.classList.contains("active") 부정 연산자
 지금은  false인데  false의  false는 true가 됨. 
 
-=> 클릭할때마다 바뀌게 됨. 
+=> 클릭 할 때마다 바뀌게 됨. 
+
+------------------------------------------------------------------------------
+
+** index02.html - 250131-JS 공부03 - DOM 예제 **
+
+lorem100 => 100개의 단어로 된 문장 만들어줌
+
+const bodytag = document.querySelector("body"); = (document.body);
+body는 document의 직계 자식이여서 이렇게 써도 됨
+
+document.body는 별도로 선언 안해도 됨
 
 
-
-
+.toggle은 있으면 주고 없으면 빼고 = > .add와 .remove의 합친거.
 
 
 
