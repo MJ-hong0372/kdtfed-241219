@@ -1,0 +1,64 @@
+/* common */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 400px;
+  margin: 50px auto;
+  font-size: 1.6rem;
+}
+body form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body form img {
+  width: 300px;
+}
+body form ul {
+  width: 300px;
+}
+body form ul li {
+  display: flex;
+  margin-bottom: 10px;
+}
+body form ul li label {
+  width: 70px;
+  text-align: right;
+  margin-right: 10px;
+}
+body form ul li input {
+  width: 100px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+body form ul li input:focus {
+  outline: none;
+}
+body form ul li input#btn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 8px;
+  border: none;
+  border-radius: 20px;
+}
+body #result {
+  text-align: center;
+  margin-top: 30px;
+}

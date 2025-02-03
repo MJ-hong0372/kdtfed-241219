@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style01.css">
+  <script defer src="./script01.js"></script>
+  <title>TO DO List</title>
+</head>
+<body>
+  <main id="container">
+    <form name="price-system">
+    <img src="https://mblogthumb-phinf.pstatic.net/MjAyNDA4MTFfMjIx/MDAxNzIzMzQwNTA0NDAx.AD5ctrlPEIrlm2NtJP5A6lv3w5WHsIjHJpVEao7ncSgg.E93VxMpb3YblisBJX5FN0ddIyo1Cf3R2ty0j63E5biEg.JPEG/%ED%8F%AD%ED%83%84%EC%84%B8%EC%9D%BCpop%EA%B8%80%EC%94%A8%EB%AC%B8%EA%B5%AC%ED%94%84%EB%A6%B0%ED%8A%B8%EB%8F%84%EC%95%88%EC%9D%B4%EB%AF%B8%EC%A7%80.jpg?type=w800" alt="sale">
+      <ul>
+        <li>
+          <label for="origin-price">원래가격</label>
+          <input type="text" name="origin-price" id="origin-price">
+        </li>
+        <li>
+          <label for="rate">할인률</label>
+          <input type="text" name="rate" id="rate">
+        </li>
+        <li>
+          <input id="btn" type="button" value="할인 가격 계산하기">
+        </li>
+      </ul>
+    </form>
+    <div id="result">   </div>
+  </main>
+</body>
+</html>

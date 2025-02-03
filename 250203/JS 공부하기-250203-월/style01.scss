@@ -1,0 +1,64 @@
+/* common */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+};
+
+ul,li {
+  list-style: none;
+};
+
+a{
+  text-decoration: none;
+  color: inherit;
+};
+
+html{
+  font-size: 62.5%;
+};
+
+body {
+  width: 400px;
+  margin: 50px auto;
+  font-size: 1.6rem;
+  form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 300px;
+    }
+    ul{
+      width: 300px;
+      li{
+        display: flex;
+        margin-bottom: 10px;
+       label{
+        width: 70px;
+        text-align: right;
+        margin-right: 10px;
+       }
+       input {
+        width: 100px;
+        border: none;
+        border-bottom: 1px solid #ccc;
+        &:focus{
+          outline: none;
+        }
+        &#btn {
+        width: 100%;
+          margin-top: 10px;
+          padding: 8px;
+          border: none;
+          border-radius: 20px;
+        }
+       }
+      }
+    }
+  }
+  #result {
+    text-align: center;
+    margin-top: 30px;
+  }
+};

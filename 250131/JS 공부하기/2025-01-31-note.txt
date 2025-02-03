@@ -34,15 +34,15 @@ TS
 
 250131-JS 공부01 - index01.html 파일 구조
 
-                 p.user / p.user / p.user
-                                       |
-         img.imgSrc / div#desc 
-                  |
-h1 / div#profile
-    |
-main
-    |
-body
+           		        p.user / p.user / p.user
+                           		            |
+        		 img.imgSrc / div#desc 
+  			                  |
+			h1 / div#profile
+  			    |
+			main
+  			    |
+			body
 
 html에서는 태그로 입력했지만, script에서는 객체로 인식해서 가져온다.
 

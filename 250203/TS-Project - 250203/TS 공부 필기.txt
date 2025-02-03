@@ -1,0 +1,25 @@
+* 2025-01-31 수업 필기 - TS
+
+
+SCSS = CSS Copile sheet
+Typescript = Javascript Compile Language
+
+주소창에 about:blank로 가면 빈 페이지로 간다.
+2024.stateofjs.com/
+
+-----------------------------------------------------------------------------------------
+
+TS는 html이 인식을 못함 확장자 설정을 node.js를 사용해서 컨파일러 해줘야 한다. 
+
+C:\Users\bcjrm>node -v
+v22.13.1  => 노드 설치 확인
+C:\Users\bcjrm>npm -v
+10.9.2  => npm 없이는 노드는 움직이지 않음
+
+---
+* 터미널에서 노드로 변환하기 *
+ npm init 입력: 질문이 많음
+
+npm init -y : 모두 예스로 노드로 만들어줘=> package.json 파일이 생김
+
+npm i @types/node  // 이 파일의 타입이 노드라는 걸 알려주는 패키지를 설치해줘=> node_modules 파일이 생성됨
