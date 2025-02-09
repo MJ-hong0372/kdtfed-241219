@@ -23,3 +23,38 @@ C:\Users\bcjrm>npm -v
 npm init -y : 모두 예스로 노드로 만들어줘=> package.json 파일이 생김
 
 npm i @types/node  // 이 파일의 타입이 노드라는 걸 알려주는 패키지를 설치해줘=> node_modules 파일이 생성됨
+
+package.json 파일 안에 
+
+"dependencies": {
+    "@types/node": "^22.13.0"
+  }
+에서 설치할때마다 내부에 추가가 됨.
+
+npm i typescript // 노드라고 컨파일링 해주는 매니저를 설치해줘=> node_modules > typescript 폴더가 생각됨.
+나중에 작업 후  node_modules 폴더는 지워야 함 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

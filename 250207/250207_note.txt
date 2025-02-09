@@ -1,0 +1,92 @@
+* 2025-02-07 (금)  수업 *
+
+
+
+... <- 전개연산자 구문
+
+
+--------
+
+* 구조분해할당*
+  const digitCount = 6;
+  const maxNumber = 45;
+라는 변수를
+
+const luckyNumber = {
+  digitCount : 6,
+  maxNumber : 45,
+}
+
+const startLotto = () => {
+  const digitCount = 6;
+  const maxNumber = 45;
+
+  let myNumber = new Set();
+
+  for (let i = 0; i < digitCount; i++) {
+    myNumber.add(Math.floor(Math.random() * maxNumber) + 1);
+  }
+  if(myNumber.size === 6) {;
+    result.innerText = `${[...myNumber]}`;
+  } //... <- 전개연산자 구문
+  else {
+    result.innerText = "재추첨하겠습니다.";
+  }
+};
+를 하단의 객체로 변환 시킬 수 있다
+
+const luckyNumber = {
+  digitCount : 6,
+  maxNumber : 45,
+};
+
+-----------------------------------------------------------
+
+const startLotto = () => {
+   const {digitCount, maxNumber} = luckyNumber;  // 구조분해할당
+  
+  let myNumber = new Set();
+
+  for (let i = 0; i < digitCount; i++) {
+    myNumber.add(Math.floor(Math.random() * maxNumber) + 1);
+  }
+  if(myNumber.size === 6) {;
+    result.innerText = `${[...myNumber]}`;
+  } //... <- 전개연산자 구문
+  else {
+    result.innerText = "재추첨하겠습니다.";
+  }
+};
+
+lottoButton.addEventListener("click", startLotto);
+
+이렇게표기한다
+
+-----------------------------------------------------------------------------
+
+
+
+||
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
