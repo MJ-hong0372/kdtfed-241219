@@ -1,8 +1,0 @@
-@import "./style/reset.scss";
-@import "./style/variables.scss";
-
-/* content */
-h1 {
-  color: map-get($map: $color, $key: main-light-color);
-  background: map-get($map: $color, $key: main-dark-color);
-}

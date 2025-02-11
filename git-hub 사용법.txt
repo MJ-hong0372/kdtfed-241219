@@ -23,7 +23,7 @@ git status
 git commit -m "firstCommit"
 
 >master라는 Branch로 전달하겠다.
-git push orgin master
+git push origin master
 
 
 
