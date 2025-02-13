@@ -23,7 +23,6 @@ html {
   src: url("./fonts/AnyConv.com__KFOmCnqEu92Fr1Mu4mxPKTU1Kg.otf");
 }
 body {
-  height: 2000px;
   font-size: 1.6rem;
   display: flex;
   justify-content: center;
@@ -88,8 +87,6 @@ body {
   flex-direction: column;
   gap: 14px;
   width: 100%;
-  height: 310px;
-  border: 1px solid red;
 }
 #container > div .title .heading h3 {
   font-size: 1.8rem;
@@ -144,8 +141,8 @@ body {
   transition: all 0.3s;
   font-size: 1.2rem;
   display: flex;
-  gap: 4px;
   align-items: center;
+  gap: 4px;
 }
 #container > div .title .subinfo span:hover {
   background: #dc143c;
@@ -155,7 +152,6 @@ body {
   background: #f0f0f0;
   padding: 12px;
   border-radius: 10px;
-  margin-bottom: 14px;
 }
 #container > div .title .review .review_title {
   margin-bottom: 10px;
@@ -175,4 +171,90 @@ body {
 }
 #container > div .title .review .review_content p {
   font-size: 1.2rem;
+}
+#container > div .hashlist {
+  position: sticky;
+  top: 268px;
+  width: 360px;
+  padding: 10px 0;
+  background: #fff;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 1s;
+}
+#container > div .hashlist.active {
+  opacity: 1;
+}
+#container > div .hashlist .hashcontent {
+  width: 586px;
+  display: flex;
+  gap: 12px;
+  background: #fff;
+}
+#container > div .hashlist .hashcontent li a {
+  display: inline-block;
+  background: #f0f0f0;
+  padding: 6px 10px;
+  font-size: 1.4rem;
+  border-radius: 8px;
+}
+#container > div .ad01 {
+  width: 100%;
+  background: #fff;
+  margin: 10px 0;
+  margin-top: -40px;
+}
+#container > div .ad01 .adimg {
+  width: 100%;
+  height: 379px;
+  background: url("./imgs/ad01.jpg") center/cover no-repeat;
+}
+#container > div .ad01 .adtitle {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: #1a76f5;
+  background: #f1f8ff;
+  padding: 14px 10px;
+}
+#container > div .ad01 .adinfo {
+  display: flex;
+  gap: 16px;
+  padding: 14px 10px;
+}
+#container > div .ad01 .adinfo .fa-facebook {
+  font-size: 4rem;
+  color: #1a76f5;
+}
+#container > div .ad01 .adinfo .addesc {
+  width: 100%;
+}
+#container > div .ad01 .adinfo .addesc span {
+  display: block;
+}
+#container > div .ad01 .adinfo .addesc span:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#container > div .ad01 .adinfo .addesc span:nth-child(2) {
+  margin: 6px 0;
+  color: #9f9f9f;
+}
+#container > div .ad01 .adinfo .addesc span:last-child {
+  font-size: 1.4rem;
+  color: #9f9f9f;
+}
+#container > div .ad01 .adinfo .addesc span:last-child b {
+  color: #000;
+}
+#container > div .contents {
+  background: #fff;
+}
+#container > div .contents .content {
+  width: 100%;
+  background: #fff;
+}
+#container > div .contents .content img {
+  width: 100%;
 }

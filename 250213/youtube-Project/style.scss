@@ -1,14 +1,6 @@
 @import "./styles/reset.scss";
 @import "./styles/valiables.scss";
 
-body {
-  height: 2000px;
-  font-size: 1.6rem;
-  display: flex;
-  justify-content: center;
-  font-family: "youtube";
-}
-
 @mixin btnType {
   display: inline-block;
   font-size: 1.4rem;
@@ -20,6 +12,12 @@ body {
     background: map-get($map: $color, $key: accent);
     color: map-get($map: $color, $key: light);
   }
+}
+body {
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  font-family: "youtube";
 }
 
 #container {
@@ -77,8 +75,6 @@ body {
       flex-direction: column;
       gap: 14px;
       width: 100%;
-      height: 310px;
-      border: 1px solid red;
       .heading {
         h3 {
           font-size: 1.8rem;
@@ -121,15 +117,14 @@ body {
           @include btnType();
           font-size: 1.2rem;
           display: flex;
-          gap: 4px;
           align-items: center;
+          gap: 4px;
         }
       }
       .review {
         background: map-get($map: $color, $key: background);
         padding: 12px;
         border-radius: 10px;
-        margin-bottom: 14px;
         .review_title {
           margin-bottom: 10px;
           span:last-child {
@@ -148,6 +143,97 @@ body {
           p {
             font-size: 1.2rem;
           }
+        }
+      }
+    }
+    .hashlist {
+      position: sticky;
+      top: 268px;
+      width: 360px;
+      padding: 10px 0;
+      background: map-get($map: $color, $key: light);
+      opacity: 0;
+      overflow: hidden;
+      transition: all 1s;
+      // border: 1px solid #f00;
+      &.active {
+        opacity: 1;
+      }
+      .hashcontent {
+        width: 586px;
+        display: flex;
+        gap: 12px;
+        background: map-get($map: $color, $key: light);
+
+        // border: 1px solid #ccc;
+        li {
+          a {
+            display: inline-block;
+            background: map-get($map: $color, $key: background);
+            padding: 6px 10px;
+            font-size: 1.4rem;
+            border-radius: 8px;
+          }
+        }
+      }
+    }
+    .ad01 {
+      width: 100%;
+      background: map-get($map: $color, $key: light);
+      margin: 10px 0;
+      margin-top: -40px;
+      .adimg {
+        width: 100%;
+        height: 379px;
+        background: url("./imgs/ad01.jpg") center/cover no-repeat;
+      }
+      .adtitle {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        color: #1a76f5;
+        background: map-get($map: $color, $key: ad-sub);
+        padding: 14px 10px;
+      }
+      .adinfo {
+        display: flex;
+        gap: 16px;
+        padding: 14px 10px;
+        .fa-facebook {
+          font-size: 4rem;
+          color: map-get($map: $color, $key: ad);
+        }
+        .addesc {
+          width: 100%;
+          span {
+            display: block;
+            &:first-child {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            }
+            &:nth-child(2) {
+              margin: 6px 0;
+              color: map-get($map: $color, $key: sub);
+            }
+            &:last-child {
+              font-size: 1.4rem;
+              color: map-get($map: $color, $key: sub);
+              b {
+                color: map-get($map: $color, $key: dark);
+              }
+            }
+          }
+        }
+      }
+    }
+    .contents {
+      background: map-get($map: $color, $key: light);
+      .content {
+        width: 100%;
+        background: map-get($map: $color, $key: light);
+        img {
+          width: 100%;
         }
       }
     }
