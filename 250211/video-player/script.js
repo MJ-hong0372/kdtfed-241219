@@ -1,4 +1,5 @@
 const playButton = document.querySelector(".play-pause");
+const player = document.querySelector("#music-player"); // 영상 재생 시 위치 확인
 const video = document.querySelector("video");
 const progressCover = document.querySelector(".progress"); //영상 끝과 끝을 잇고 있는 바 
 const volumBar = document.querySelector("input[type='range']");
@@ -60,11 +61,21 @@ const setRate = (e) => {
   video.playbackRate = rate;
 }; // playbackRate는 영상 재생 속도를 관리한다.
 
+const videoPoint = (e) => {
+  const mouseX = e.pageX - player.offsetLeft;
+  const progressBarWidth = progressCover.clientWidth;
+  const duration = video.duration;
+  const clickedTime = (mouseX / progressBarWidth) * duration;
+  video.currentTime = clickedTime; // 바 클릭시 해당 플레이 시간으로 이동한다.
+}; //바 클릭시 영상 이동
+
 playButton.addEventListener("click", togglePlay);
-video.addEventListener("click", togglePlay);
+video.addEventListener("pointerdown", togglePlay);
 video.addEventListener("timeupdate", updateTime);
 video.addEventListener("timeupdate", updateProgress);
 volumBar.addEventListener("change", setVolume);
+progressCover.addEventListener("click", videoPoint); //바 클릭시 영상 이동
+
 rateButtons.forEach((button) => {
   button.addEventListener("click", (e) => {
     setRate(e);
@@ -73,3 +84,12 @@ rateButtons.forEach((button) => {
 fullButton.addEventListener("click", () => {
   video.requestFullscreen();
 });
+
+document.addEventListener("fullscreenchange", () => {
+  if(document.fullscreenElement) {
+    document.addEventListener("pointerdown", togglePlay);
+  } else {
+    document.removeEventListener("pointerdown", togglePlay);
+    video.addEventListener("pointerdown", togglePlay);
+  }
+}); // 브라우저의 풀스크린 지양정책떄문에 발생한 풀스크린 상태 클릭 이벤트 오류 해결방법

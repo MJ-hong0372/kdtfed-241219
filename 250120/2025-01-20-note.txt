@@ -86,7 +86,7 @@ Netlify => 소스코드가 git-hub에 올라가 있어야 한다. => 폴더를 �
 4. git add .
 5. git status
 6. git commit -m "firstCommit"
-7. git push orgin master
+7. git push origin master
 
 
 => Netlify ( https://app.netlify.com/ ) 페이지로 이동
