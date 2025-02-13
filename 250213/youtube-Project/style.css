@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+@font-face {
+  font-family: "youtube";
+  src: url("./fonts/AnyConv.com__KFOmCnqEu92Fr1Mu4mxPKTU1Kg.otf");
+}
+body {
+  height: 2000px;
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  font-family: "youtube";
+}
+
+#container {
+  width: 360px;
+  height: 100%;
+  background: #fff;
+  position: relative;
+}
+#container header {
+  width: 360px;
+  position: fixed;
+  z-index: 10;
+  background: #000;
+}
+#container header #header_contents {
+  width: 100%;
+  height: 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+#container header #header_contents img {
+  height: 22px;
+  cursor: pointer;
+}
+#container header #header_contents #header_right {
+  width: 54px;
+  display: flex;
+  justify-content: space-between;
+}
+#container header #header_contents #header_right i {
+  color: #fff;
+  cursor: pointer;
+}
+#container figure {
+  position: fixed;
+  top: 50px;
+  width: 360px;
+  height: 220px;
+  z-index: 10;
+}
+#container figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#container > div {
+  position: absolute;
+  top: 270px;
+  background: #fff;
+  width: 100%;
+  padding: 12px;
+}
+#container > div .title {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  height: 310px;
+  border: 1px solid red;
+}
+#container > div .title .heading h3 {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+#container > div .title .heading .add {
+  font: normal 1.4rem/1 "youtube";
+  color: #9f9f9f;
+}
+#container > div .title .middle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#container > div .title .middle .profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+}
+#container > div .title .middle .profile img {
+  width: 35px;
+  border-radius: 50%;
+}
+#container > div .title .middle .profile span {
+  font-size: 1.4rem;
+  font-weight: normal;
+  color: #9f9f9f;
+}
+#container > div .title .middle .middle_btn span {
+  display: inline-block;
+  font-size: 1.4rem;
+  background: #f0f0f0;
+  padding: 6px 18px;
+  border-radius: 20px;
+  transition: all 0.3s;
+}
+#container > div .title .middle .middle_btn span:hover {
+  background: #dc143c;
+  color: #fff;
+}
+#container > div .title .subinfo {
+  display: flex;
+  justify-content: space-between;
+}
+#container > div .title .subinfo span {
+  display: inline-block;
+  font-size: 1.4rem;
+  background: #f0f0f0;
+  padding: 6px 18px;
+  border-radius: 20px;
+  transition: all 0.3s;
+  font-size: 1.2rem;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+#container > div .title .subinfo span:hover {
+  background: #dc143c;
+  color: #fff;
+}
+#container > div .title .review {
+  background: #f0f0f0;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 14px;
+}
+#container > div .title .review .review_title {
+  margin-bottom: 10px;
+}
+#container > div .title .review .review_title span:last-child {
+  color: #9f9f9f;
+  font-size: 1.4rem;
+}
+#container > div .title .review .review_content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+#container > div .title .review .review_content img {
+  width: 30px;
+  border-radius: 50%;
+}
+#container > div .title .review .review_content p {
+  font-size: 1.2rem;
+}

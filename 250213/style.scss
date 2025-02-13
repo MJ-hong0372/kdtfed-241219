@@ -1,0 +1,14 @@
+@import "./styles/reset.scss";
+@import "./styles/valiables.scss";
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,155 @@
+@import "./styles/reset.scss";
+@import "./styles/valiables.scss";
+
+body {
+  height: 2000px;
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  font-family: "youtube";
+}
+
+@mixin btnType {
+  display: inline-block;
+  font-size: 1.4rem;
+  background: map-get($map: $color, $key: background);
+  padding: 6px 18px;
+  border-radius: 20px;
+  transition: all 0.3s;
+  &:hover {
+    background: map-get($map: $color, $key: accent);
+    color: map-get($map: $color, $key: light);
+  }
+}
+
+#container {
+  width: 360px;
+  height: 100%;
+  background: map-get($map: $color, $key: light);
+  position: relative;
+  header {
+    width: 360px;
+    position: fixed;
+    z-index: 10;
+    background: map-get($map: $color, $key: dark);
+    #header_contents {
+      width: 100%;
+      height: 55px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      img {
+        height: 22px;
+        cursor: pointer;
+      }
+      #header_right {
+        width: 54px;
+        display: flex;
+        justify-content: space-between;
+        i {
+          color: map-get($map: $color, $key: light);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  figure {
+    position: fixed;
+    top: 50px;
+    width: 360px;
+    height: 220px;
+    z-index: 10;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  & > div {
+    position: absolute;
+    top: 270px;
+    background: map-get($map: $color, $key: light);
+    width: 100%;
+    padding: 12px;
+    .title {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      width: 100%;
+      height: 310px;
+      border: 1px solid red;
+      .heading {
+        h3 {
+          font-size: 1.8rem;
+          margin-bottom: 8px;
+        }
+        .add {
+          font: normal 1.4rem/1 "youtube";
+          color: map-get($map: $color, $key: sub);
+        }
+      }
+      .middle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .profile {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          font-weight: bold;
+          img {
+            width: 35px;
+            border-radius: 50%;
+          }
+          span {
+            font-size: 1.4rem;
+            font-weight: normal;
+            color: map-get($map: $color, $key: sub);
+          }
+        }
+        .middle_btn {
+          span {
+            @include btnType();
+          }
+        }
+      }
+      .subinfo {
+        display: flex;
+        justify-content: space-between;
+        span {
+          @include btnType();
+          font-size: 1.2rem;
+          display: flex;
+          gap: 4px;
+          align-items: center;
+        }
+      }
+      .review {
+        background: map-get($map: $color, $key: background);
+        padding: 12px;
+        border-radius: 10px;
+        margin-bottom: 14px;
+        .review_title {
+          margin-bottom: 10px;
+          span:last-child {
+            color: map-get($map: $color, $key: sub);
+            font-size: 1.4rem;
+          }
+        }
+        .review_content {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          img {
+            width: 30px;
+            border-radius: 50%;
+          }
+          p {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+}
