@@ -18,7 +18,40 @@
 
 // JS 에서 static 타입에서는 안되는 것이이 TS에서는 허용이 됨
 
-||
+
+--------------------------------------------------------------------------------------------------
+
+
+SCSS 프로젝트 라이브러리 정리
+
+* jQuery Library
+
+1-1. 각각의 jQuery Library를 사용할 때, CSS 를 먼저 적용해서 설치하고, 그 다음에 script를 적용 및 설치하는 방식으로 사용해야 에러가 없다.
+
+1-2. 참고로 2~5번 순서는 상관이 없다.
+
+1. jQuery를 가장 먼저 설치 
+- defer를 사용할 필요 없음.(DOM 제어용이니까)
+
+2. page scroll effect 
+- 페이지이동 시 입체적으로 움직이는 것 
+- https://codyhouse.co/gem/page-scroll-effects 에서 다운로드 후 필요한 것만 쓰면 됨 
+- modernizr.js / velocity.min.js / velocity.ui.min.js / main.js
+- velocity.css라고 CSS명을 바꿈. 충돌 막기 위해
+
+3. slick slider 
+- https://kenwheeler.github.io/slick/
+
+4. feather light 
+- https://noelboss.github.io/featherlight/
+- 모달창 만들기
+
+5. scrollTo 
+- https://github.com/flesler/jquery.scrollTo
+
+6. custom css & js 
+
+
 
 
 
