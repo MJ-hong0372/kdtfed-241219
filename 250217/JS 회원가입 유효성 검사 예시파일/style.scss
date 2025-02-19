@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import "./style/reset.scss";
+@import "./style/variables.scss";
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+  font-family: map-get($map: $font, $key: noto);
+}
+
+#container {
+  width: 540px;
+  height: 900px;
+  border: 1px solid map-get($map: $color, $key: border);
+  box-shadow: 7px 7px 40px rgba($color: #0068ff, $alpha: 0.3);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;
+  h3 {
+    width: 380px;
+    font-size: 3.2rem;
+    font-family: map-get($map: $font, $key: noto);
+    font-weight: bold;
+    color: map-get($map: $color, $key: title);
+    margin-bottom: 40px;
+  }
+  .error {
+    color: crimson;
+    height: 10px;
+    font-size: 1.2rem;
+    font-family: map-get($map: $font, $key: noto);
+  }
+  .inputBox {
+    width: 380px;
+    height: 60px;
+    margin-top: 20px;
+    padding: 18px;
+    background: map-get($map: $color, $key: light);
+    border: 1px solid map-get($map: $color, $key: input);
+    border-radius: 8px;
+    &::placeholder {
+      color: map-get($map: $color, $key: placeholder);
+      font-size: 1.6rem;
+      font-family: map-get($map: $font, $key: noto);
+    }
+  }
+  .phone-wrapper {
+    width: 380px;
+    height: 40px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .phoneNum {
+      width: 100px;
+      height: 40px;
+      border: 1px solid map-get($map: $color, $key: input);
+      border-radius: 8px;
+      font-family: map-get($map: $font, $key: noto);
+      font-size: 1.6rem;
+      text-align: center;
+    }
+  }
+  .token-wrapper {
+    width: 380px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 20px;
+    font-family: map-get($map: $font, $key: noto);
+    .token,
+    .token-timer {
+      font-family: map-get($map: $font, $key: noto);
+      color: map-get($map: $color, $key: title);
+      font-size: 1.8rem;
+    }
+    #token-button,
+    #token-timer-confirm-button {
+      width: 120px;
+      height: 40px;
+      margin-left: 20px;
+      font-family: map-get($map: $font, $key: noto);
+      font-size: 1.6rem;
+      border: 1px solid map-get($map: $color, $key: input);
+      border-radius: 8px;
+    }
+  }
+  .location {
+    width: 380px;
+    height: 60px;
+    margin-top: 20px;
+    padding: 18px;
+    color: map-get($map: $color, $key: placeholder);
+    font-family: map-get($map: $font, $key: noto);
+    font-size: 1.6rem;
+    border: 1px solid map-get($map: $color, $key: input);
+    border-radius: 8px;
+  }
+  .gender-wrapper {
+    width: 380px;
+    height: 40px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .gender {
+      width: 70px;
+      text-align: center;
+      font-family: map-get($map: $font, $key: noto);
+    }
+  }
+  hr {
+    width: 380px;
+    margin: 30px 0 20px;
+    border: 1px solid map-get($map: $color, $key: input);
+    border-radius: 10px;
+  }
+  #signup-button {
+    width: 380px;
+    height: 75px;
+    border: 1px solid map-get($map: $color, $key: input);
+    font-family: map-get($map: $font, $key: noto);
+    border-radius: 8px;
+    font-size: 1.8rem;
+  }
+}
