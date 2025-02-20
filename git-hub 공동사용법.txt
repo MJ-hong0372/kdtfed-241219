@@ -1,0 +1,139 @@
+**PM 입장**
+
+1. PM : 팀 프로젝트용 레포지토리 필요
+https://github.com/MJ-hong0372?tab=repositories
+새 이름으로 생성
+
+
+2. PM : 로컬 컴퓨터에 팀 프로젝트에 기준이 될 폴더 및 파일 생성 > 커밋 & 푸쉬 
+
+3. PM :
+- 로컬 컴퓨터 staging area 존재 (*git init)
+- staging area & 레포지토리의 연결 
+(*git remote add origin 레포지토리 주소)
+(* git remote -v)
+
+- staging area에 데이터를 담는 명령어
+git add . : 현재 .git이 설치 되어 있는 루트 폴더의 모든 데이터를 staging area에 넣겠다는 의미.
+
+git add 특정파일 : 특정 파일만 staging area에 넣겠다는 의미
+git add 특정폴더 : 특정 폴더만 staging area에 넣겠다는 의미
+
+git status : staging area의 현재 상태를 확인
+
+git rm --cashed index.html : 해당 파일을 뺌
+
+
+> Commit Covention (*커밋 메세지를 어떻게 어떤 패턴, 방식으로 작명 할 것인가?)
+(1)  유다시티 커밋 컨벤션
+> header body footer 방식으로 하단과 같이 작성함. 어떻방식일지는 PM이 결정함.
+> First MJ #main / 몇번째인지, 이름, 작업페이지명 순으로 넣기로 약속한 경우 예시
+
+(2) 깃 이모지 : 
+- 5개 정도의 팀 내 협의된 이모지를 가지고 커밋 메세지로 넣음. 
+작업중 / 완료 / 파트별로 / 누구인지 / 등등으로
+
+> 커밋 이름은 중요함. 커밋 이름으로 이 시점으로 되돌릴 수 있음 (버전관리)
+
+git commit -m "" : 버전 관리로 넘어감
+
+현재까지의 commit 내역을 확인해 보려면?!
+
+git log : 기존 commit 내역 확인 가능.
+commit c0deae32c792a166cdfbc45f6d663a7412dd269f (HEAD -> master)
+
+이전에 해당 파일이 HEAD에 있었으니 거기로 돌려보내겠다.
+ 
+git reset HEAD^
+
+git push origin master / 맥은 main임
+
+
+**TM 입장**
+
+- 팀원 : PM이 푸쉬한 데이터를 그대로 받아서 작업을 해야 나중에 동일한 히스토리를 기반으로 병합 & 분리를 하던, 편집을 하던 할 수 있음!!!
+
+
+- git clone 레퍼지토리 주소
+git clone https://github.com/MJ-hong0372/PM_NEW.git
+
+- git pull이 아니라 git clone을 해야 PM이 만든 해당 히스토리까지 모두 담긴 .git을 같이 가져 올 수 있다.
+
+- .git이 있는 폴더까지 들어와서 작업해야지 밖에서 작업하면 안된다.
+C:\Users\bcjrm\Desktop\MEMBER\PM_NEW
+
+- git add .  :실제 나의 작업 완료 후 수정 사항을 staging area에 넣어준다.
+
+- git restore --staged index.html // 이전 단계로 되돌린다.
+
+- Branch : 깃허브 내 하나의 레퍼지토리에서 관리할 수 있는 일종의 개별적인 폴더
+
+- git push origin mater를 하면 안됨! 
+
+팀원 간의 개별 브런치 생성을 한 후 거기에 데이터를 푸쉬한다.
+
+- git checkout -b team01 // team01이라는 Branch를 만들겠다.
+
+- git checkout master // mater라는 Branch로 돌아가겠다.
+
+- git branch : 현재 프로젝트에서 생성된 레포지토리 히스토리를 확인 가능.
+
+이후 내가 만든 Branch로 push 한다.
+
+- git push origin team01
+
+- git reset HEAD^ : 가장 최근 커밋과 히스토리를 제거!!!
+
+- git commit -m "team01 first commit"
+
+- git revert : 기존 commit 히스토리를 유지하면서 과거를 가져오겠다.
+
+- git push origin team01
+- git push origin team02
+- git push origin team03
+
+> 모든 팀원들이 다 데이터를 올린 다음 하나로 묶어줘야 함
+
+mater => 마지막 client 제출용 파일.
+hatfix 브런치 => 배포 TEST용 브런치 (local 상에서는 문제가 없었으나 배포시 문제 발생가능이 있음.)  => 버그 발생 시 이 파일을 수정.
+develop 브런치. 개발자들이 각자 작업한 요소를 합치고 파일간 충돌이나 버그 등을 확인 후 최종본을 master로 보냄. 
+feature 브런치 - team01 / team02 / team03... => 개발자들 개별 작업용 브런치
+
+
+PM 입장에서는 최초에 master 브런치를 만들 때 같이 develop 브런치까지 생성을 해주는 것이 일반적임.
+
+- 새 폴더를 만들고 C:\Users\bcjrm\Desktop\Develop\PM_NEW 폴더로 감.
+git clone https://github.com/MJ-hong0372/PM_NEW.git
+
+- C:\Users\bcjrm\Desktop\Develop\PM_NEW 폴더로 감.
+- ait add .
+- git commit -m "develop first commit"
+- git push origin develop
+
+이후 github의 Pull requests 로 간다. 
+https://github.com/MJ-hong0372/PM_NEW/pulls
+
+- pull requests : PM 및 협업 관계에 있는 개발자가 pull 해달라고 요청하는 단계
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

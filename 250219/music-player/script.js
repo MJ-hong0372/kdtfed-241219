@@ -1,3 +1,20 @@
+import { API_UNSPLASH_KEY } from "./env.js";
+import(API_UNSPLASH_KEY);
+
+const getImg = `https://api.unsplash.com/photos/random/?client_id=${API_UNSPLASH_KEY}`;
+const fegure = document.querySelector("figure");
+const loading = document.querySelector(".loading");
+
+fetch(getImg)
+  .then((response) => response.json())
+  .then(({ urls: { full } }) => {
+    fegure.style.backgroundImage = `url(${full})`;
+    loading.style.display = "none";
+  })
+  .catch((error) => {
+    console.error("이미지 로드 중 오류 발생!", error);
+  });
+
 const frame = document.querySelector("section");
 const lists = frame.querySelectorAll("article");
 const audios = frame.querySelectorAll("audio");
@@ -22,27 +39,22 @@ lists.forEach((list) => {
       .closest("article")
       .classList.contains("on");
 
-    const activAudio = e.currentTarget
-      .closest("article")
-      .querySelector("audio")
-      .play();
-
     if (isActive) {
-      e.currentTarget
+      const activePic = e.currentTarget
         .closest("article")
-        .querySelector(".pic")
-        .classList.add("on");
-    }
+        .querySelector(".pic");
 
-    activePic.classList.add("on");
-    activAudio.play();
+      const activeAudio = e.currentTarget
+        .closest("article")
+        .querySelector("audio");
 
-    e.currentTarget
-      .closest("article")
-      .querySelector("audio")
-      .addEventListener("ended", () => {
+      activePic.classList.add("on");
+      activeAudio.play();
+
+      activeAudio.addEventListener("ended", () => {
         activePic.classList.remove("on");
       });
+    }
   });
 
   pause.addEventListener("click", (e) => {
@@ -61,13 +73,19 @@ lists.forEach((list) => {
   });
 
   load.addEventListener("click", (e) => {
-    e.currentTarget
+    const isActive = e.currentTarget
       .closest("article")
-      .querySelector(".pic")
-      .classList.add("on");
+      .classList.contains("on");
 
-    e.currentTarget.closest("article").querySelector("audio").load();
-    e.currentTarget.closest("article").querySelector("audio").play();
+    if (isActive) {
+      e.currentTarget
+        .closest("article")
+        .querySelector(".pic")
+        .classList.add("on");
+
+      e.currentTarget.closest("article").querySelector("audio").load();
+      e.currentTarget.closest("article").querySelector("audio").play();
+    }
   });
 });
 

@@ -1,0 +1,63 @@
+** 2025 02 19 (수) 필기 **
+
+API = Application Programming Interface
+
+https://unsplash.com/oauth/applications/711569
+
+Access Key
+FKf5G016M2lD7rG017hjmyeYDBTroc1H9hdCgvMv4ig
+
+* 공식 홈페이지의 문서 탭확인 *
+
+https://unsplash.com/documentation
+
+새로고침 할 때마다 랜덤으로 이미지 가져오는 API 주소
+
+https://api.unsplash.com/photos/random/?client_id=FKf5G016M2lD7rG017hjmyeYDBTroc1H9hdCgvMv4ig
+
+const getImg =
+  "https://api.unsplash.com/photos/random/?client_id=FKf5G016M2lD7rG017hjmyeYDBTroc1H9hdCgvMv4ig";
+
+이걸 그대로 업로드 하면 내 주소가 그대로 공유됨
+환경변수를 만들어준다.
+
+env.js (환경변수용 JS) FKf5G016M2lD7rG017hjmyeYDBTroc1H9hdCgvMv4ig
+export가 들어간 JS 는 변수가 되어 타 스크립트에 들어가는 역할을 한다
+
+찾아올 파일에서 import { API_UNSPLASH_KEY } from "./env.js"; 를 최상단에 선언한다. 그 다음
+const getImg = `https://api.unsplash.com/photos/random/?client_id=${API_UNSPLASH_KEY}`;
+으로 키 값을 변수로 불러온다.
+
+env.js는 올리면 안되니까 .gitignore 파일을 만들어서 env.js를 기재한다.
+이러면 이 파일만 안 올라간다.
+
+=> 이 파일이 안나타남.
+
+=> 환경 변수 파일을 끌어오는 경우는 
+1. VScode를 껐다 킨다.
+2. Uncaught SyntaxError: Cannot use import statement outside a module 라고 뜨면 묘듈 방식으로 설정을 해줘야 한다.
+html에서 script type="module"이라고 반드시 설정해준다.
+
+----------------------------------------------------------------------------------
+
+git push --set-upstream origin
+
+정말 완전 초심자 - 개발 및 퍼블리싱을 많이 안해본 사람의 경우!!!
+
+상세기술서 // 기능정의서
+각각의 class와 id명 정하고, 레이아웃 구조 정하기
+
+----------------------------------------------------------------------------------
+
+
+filter: invert(1); // 색 반전효과
+
+
+
+
+
+
+
+
+
+

@@ -43,7 +43,13 @@
 <button id="token-button" disabled>인증번호 전송</button>
 disabled 버튼 비활성화.
 
+ &::placeholder {
+      color: map-get($map: $color, $key: placeholder);
+      font-size: 1.6rem;
+    }
 
+form 요소는 부모에게 상속 받지 않음
+직접 줘야 함
 
 
 
